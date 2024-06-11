@@ -32,7 +32,7 @@ Tmetric/
 
 ```bash
 
-cd my-project
+cd Tmetric
 ```
 
 ## Usage
