@@ -6,7 +6,7 @@
 ## Project Type
 
 
-## Deplolyed App
+## Deployed App
 
 
 ## Directory Structure
