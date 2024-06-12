@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
@@ -22,7 +24,27 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+       
+/* This is Sushant's Code */
+ .sidebar {
+            position: relative;
+            top: 0;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+/* Ending of Sushant's Code */
+
+/* This is Parveen's Code */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
       body {
         font-family: "Open Sans", sans-serif;
       }
@@ -44,9 +66,70 @@
     border-color: #2564d0 !important;
     
    }
+/* Ending of Parveen's Code */
+
+/* This is Dhananjay's Code */
+/* Ending of Dhananjay's Code */
+
+/* This is Mihir's Code */
+/* Ending of Mihir's Code */
+
+/* This is Surya's Code */
+/* Ending of Surya's Code */
+
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+<!-- Sushant's Code ----------------------------------------------------------------------------- -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="time-tracking" class="content-section active">
+                    <img src="https://tmetric.com/media/pszkp4ly/image-time-page.svg" alt="Time Tracking"
+                        class="img-fluid" />
+                </div>
+                <div id="project-management" class="content-section">
+                    <img src="https://tmetric.com/media/epxhwygn/img-advantages-project-management.svg"
+                        alt="Project Management" class="img-fluid" />
+                </div>
+                <div id="team-management" class="content-section">
+                    <img src="https://tmetric.com/media/ef3fhhpb/img-advantages-team-management.svg"
+                        alt="Team Management" class="img-fluid" />
+                </div>
+                <div id="billing-invoicing" class="content-section">
+                    <img src="https://tmetric.com/media/hoqdfeg5/img-advantages-invoice.svg" alt="Billing & Invoicing"
+                        class="img-fluid" />
+                </div>
+                <div id="reporting" class="content-section">
+                    <img src="https://tmetric.com/media/dc0o2m4j/img-advantages-reporting.svg" alt="Reporting"
+                        class="img-fluid" />
+                </div>
+                <div id="time-off" class="content-section">
+                    <img src="https://tmetric.com/media/eovjubmf/img-advantages-time-off.svg" alt="Time Off"
+                        class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-4 sidebar">
+                <div class="list-group" id="sidebar-menu">
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#time-tracking">Time
+                        Tracking</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#project-management">Project
+                        Management</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#team-management">Team
+                        Management</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#billing-invoicing">Billing
+                        & Invoicing</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#reporting">Reporting</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#time-off">Time Off</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</br>
+<!-- Parveen's Code -------------------------------------- -->
+
     <div class="container-fluid ">
       <section id="track time" >
         <div class="container  ">
@@ -167,3 +250,4 @@
     ></script>
   </body>
 </html>
+
