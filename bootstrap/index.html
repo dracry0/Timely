@@ -27,7 +27,7 @@
 
        
 /* This is Sushant's Code */
- .sidebar {
+.sidebar {
             position: relative;
             top: 0;
         }
@@ -36,8 +36,34 @@
             display: none;
         }
 
-        .content-section.active {
+        .list-group-item {
+            cursor: pointer;
+        }
+
+        .list-group-item.active {
+            background-color: #f8f9fa;
+            color: #000;
+        }
+
+        .col-md-8 img {
             display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content-section p {
+            margin-top: 10px;
+        }
+
+        .content-section .learn-more {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .content-section .learn-more:hover {
+            text-decoration: underline;
         }
 /* Ending of Sushant's Code */
 
@@ -105,52 +131,104 @@
 
 <body>
 <!-- Sushant's Code ----------------------------------------------------------------------------- -->
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row my-5">
             <div class="col-md-8">
-                <div id="time-tracking" class="content-section active">
-                    <img src="https://tmetric.com/media/pszkp4ly/image-time-page.svg" alt="Time Tracking"
-                        class="img-fluid" />
-                </div>
-                <div id="project-management" class="content-section">
-                    <img src="https://tmetric.com/media/epxhwygn/img-advantages-project-management.svg"
-                        alt="Project Management" class="img-fluid" />
-                </div>
-                <div id="team-management" class="content-section">
-                    <img src="https://tmetric.com/media/ef3fhhpb/img-advantages-team-management.svg"
-                        alt="Team Management" class="img-fluid" />
-                </div>
-                <div id="billing-invoicing" class="content-section">
-                    <img src="https://tmetric.com/media/hoqdfeg5/img-advantages-invoice.svg" alt="Billing & Invoicing"
-                        class="img-fluid" />
-                </div>
-                <div id="reporting" class="content-section">
-                    <img src="https://tmetric.com/media/dc0o2m4j/img-advantages-reporting.svg" alt="Reporting"
-                        class="img-fluid" />
-                </div>
-                <div id="time-off" class="content-section">
-                    <img src="https://tmetric.com/media/eovjubmf/img-advantages-time-off.svg" alt="Time Off"
-                        class="img-fluid" />
-                </div>
+                <img id="time-tracking-img" src="https://tmetric.com/media/pszkp4ly/image-time-page.svg"
+                    alt="Time Tracking" class="img-fluid" />
+                <img id="project-management-img" src="https://tmetric.com/media/epxhwygn/img-advantages-project-management.svg"
+                    alt="Project Management" class="img-fluid" style="display: none;" />
+                <img id="team-management-img" src="https://tmetric.com/media/ef3fhhpb/img-advantages-team-management.svg"
+                    alt="Team Management" class="img-fluid" style="display: none;" />
+                <img id="billing-invoicing-img" src="https://tmetric.com/media/hoqdfeg5/img-advantages-invoice.svg"
+                    alt="Billing & Invoicing" class="img-fluid" style="display: none;" />
+                <img id="reporting-img" src="https://tmetric.com/media/dc0o2m4j/img-advantages-reporting.svg"
+                    alt="Reporting" class="img-fluid" style="display: none;" />
+                <img id="time-off-img" src="https://tmetric.com/media/eovjubmf/img-advantages-time-off.svg"
+                    alt="Time Off" class="img-fluid" style="display: none;" />
             </div>
             <div class="col-md-4 sidebar">
                 <div class="list-group" id="sidebar-menu">
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#time-tracking">Time
-                        Tracking</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#project-management">Project
-                        Management</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#team-management">Team
-                        Management</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#billing-invoicing">Billing
-                        & Invoicing</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#reporting">Reporting</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-target="#time-off">Time Off</a>
+                    <div class="list-group-item list-group-item-action active" onclick="showContent('time-tracking')">
+                        Time Tracking
+                        <div id="time-tracking" class="content-section" style="display: block;">
+                            <p>Capture every task you work on. Take control over time intervals by simple time tracking</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action" onclick="showContent('project-management')">
+                        Project Management
+                        <div id="project-management" class="content-section">
+                            <p>Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see the project progress at a glance, collaborate easily, keep deadlines and prevent over budgeting</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action" onclick="showContent('team-management')">
+                        Team Management
+                        <div id="team-management" class="content-section">
+                            <p>Measure productivity and activity level of your team, assign tasks in a click, monitor workflow and distribute the workload. Syncs your teams’ work and improves efficiency.</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action" onclick="showContent('billing-invoicing')">
+                        Billing & Invoicing
+                        <div id="billing-invoicing" class="content-section">
+                            <p>With the accurate billing system, set billable rates and easily create an invoice based on tracked time and expenses, and get paid promptly.</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action" onclick="showContent('reporting')">
+                        Reporting
+                        <div id="reporting" class="content-section">
+                            <p>With a flexible reporting system, you have a choice to get insights into your projects and team productivity, analyze incomes and keep costs under control</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
+                    <div class="list-group-item list-group-item-action" onclick="showContent('time-off')">
+                        Time Off
+                        <div id="time-off" class="content-section">
+                            <p>Add a PTO policy for your organization, simply ask for days off, control missed workdays, manage balances and teams attendance hassle-free</p>
+                            <a href="#" class="learn-more">Learn More --></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-<hr>
+    <script>
+        function showContent(sectionId) {
+            var contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var listItems = document.querySelectorAll('.list-group-item');
+            listItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            var targetContent = document.getElementById(sectionId);
+            targetContent.style.display = 'block';
+
+            var targetImage = document.getElementById(sectionId + '-img');
+            if (targetImage) {
+                var images = document.querySelectorAll('.col-md-8 img');
+                images.forEach(function (img) {
+                    img.style.display = 'none';
+                });
+
+                targetImage.style.display = 'block';
+            }
+
+            var listItem = document.querySelector('[onclick="showContent(\'' + sectionId + '\')"]');
+            listItem.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showContent('time-tracking');
+        });
+    </script>
 <!-- Parveen's Code -------------------------------------- -->
 
     <div class="container-fluid ">
