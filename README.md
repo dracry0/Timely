@@ -1,4 +1,4 @@
-# Tmetric
+# Timely
 
 ## Introduction
 
