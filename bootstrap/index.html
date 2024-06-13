@@ -27,6 +27,14 @@
 
        
 /* This is Sushant's Code */
+.expanded {
+            background-color: #e0f7fa !important; 
+            color: #0d47a1 !important; 
+            border-color: #0d47a1 !important; 
+            border-radius: 10px;
+            border-width: 3px; 
+        }
+
 .sidebar {
             position: relative;
             top: 0;
@@ -121,6 +129,7 @@
 /* Ending of Dhananjay's Code */
 
 /* This is Mihir's Code */
+
 /* Ending of Mihir's Code */
 
 /* This is Surya's Code */
@@ -131,8 +140,8 @@
 
 <body>
 <!-- Sushant's Code ----------------------------------------------------------------------------- -->
-    <div class="container ">
-        <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5 ">Best time tracking features for your business</h1>
+    <div class="container">
+        <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5">Best time tracking features for your business</h1>
         
         <div class="row my-5 py-5 px-0">
             <div class="col-md-8">
@@ -151,44 +160,44 @@
             </div>
             <div class="col-md-4 sidebar">
                 <div class="list-group" id="sidebar-menu">
-                    <div class="list-group-item list-group-item-action active" onclick="showContent('time-tracking')">
-                        Time Tracking
+                    <div class="list-group-item list-group-item-action active expanded " onclick="showContent('time-tracking')">
+                        <h5 style="font-weight: bolder;">Time Tracking</h5>
                         <div id="time-tracking" class="content-section" style="display: block;">
                             <p>Capture every task you work on. Take control over time intervals by simple time tracking</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('project-management')">
-                        Project Management
-                        <div id="project-management" class="content-section">
+                        <h5 style="font-weight: bolder;">Project Management</h5>
+                        <div id="project-management" class="content-section" style="display: none;">
                             <p>Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see the project progress at a glance, collaborate easily, keep deadlines and prevent over budgeting</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('team-management')">
-                        Team Management
-                        <div id="team-management" class="content-section">
+                        <h5 style="font-weight: bolder;">Team Management</h5>
+                        <div id="team-management" class="content-section" style="display: none;">
                             <p>Measure productivity and activity level of your team, assign tasks in a click, monitor workflow and distribute the workload. Syncs your teams’ work and improves efficiency.</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('billing-invoicing')">
-                        Billing & Invoicing
-                        <div id="billing-invoicing" class="content-section">
+                        <h5 style="font-weight: bolder;"> Billing & Invoicing</h5>
+                        <div id="billing-invoicing" class="content-section" style="display: none;">
                             <p>With the accurate billing system, set billable rates and easily create an invoice based on tracked time and expenses, and get paid promptly.</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('reporting')">
-                        Reporting
-                        <div id="reporting" class="content-section">
+                        <h5 style="font-weight: bolder;">Reporting</h5>
+                        <div id="reporting" class="content-section" style="display: none;">
                             <p>With a flexible reporting system, you have a choice to get insights into your projects and team productivity, analyze incomes and keep costs under control</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('time-off')">
-                        Time Off
-                        <div id="time-off" class="content-section">
+                        <h5 style="font-weight: bolder;">Time Off</h5>
+                        <div id="time-off" class="content-section" style="display: none;">
                             <p>Add a PTO policy for your organization, simply ask for days off, control missed workdays, manage balances and teams attendance hassle-free</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
@@ -207,7 +216,7 @@
 
             var listItems = document.querySelectorAll('.list-group-item');
             listItems.forEach(function (item) {
-                item.classList.remove('active');
+                item.classList.remove('active', 'expanded');
             });
 
             var targetContent = document.getElementById(sectionId);
@@ -224,7 +233,7 @@
             }
 
             var listItem = document.querySelector('[onclick="showContent(\'' + sectionId + '\')"]');
-            listItem.classList.add('active');
+            listItem.classList.add('active', 'expanded');
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -610,6 +619,10 @@
 
         </div>
     </div>
+    <!-- End of Dhananjay's code -->
+<!-- 
+    Mihir's code -->
+    <!-- end of Mihir's code -->
 
 
   </body>
