@@ -77,6 +77,32 @@
       body {
         font-family: "Open Sans", sans-serif;
       }
+      .integrations-info .list {
+            padding: 6px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .integrations-info .list li {
+           
+            width: 144px;
+        }
+        .integrations-info .list a {
+            display: block;
+            border: 1px solid #E2E7EB;
+            border-radius: 12px;
+            padding-bottom: calc(100% - 2px);
+            position: relative;
+            background: #fff;
+            transition: all .5s ease;
+        }
+        .integrations-info .list a img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 18px);
+        }
       #read a {
     color: #4082f3 !important;
 }
@@ -95,6 +121,19 @@
     border-color: #2564d0 !important;
     
    }
+   #logo li{
+    cursor: pointer;
+   }
+   #logo li:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px !important;
+   }
+ 
+@media(width<=768px){
+#profile{
+  display: none !important;
+}
+}
+ 
 /* Ending of Parveen's Code */
 
 /* This is Dhananjay's Code */
@@ -174,6 +213,10 @@
         <div class=" text-center">
 
         <div class="row my-5">
+
+        <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5 ">Best time tracking features for your business</h1>
+        
+        <div class="row my-5 py-5 px-0">
             <div class="col-md-8">
                 <img id="time-tracking-img" src="https://tmetric.com/media/pszkp4ly/image-time-page.svg"
                     alt="Time Tracking" class="img-fluid" />
@@ -271,126 +314,236 @@
         });
     </script>
 <!-- Parveen's Code -------------------------------------- -->
+<section id="integate">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="  text-center  d-flex flex-column justify-content-center ">
+                <h1 class="fw-bolder text-center  mt-5 mb-4"  style="color: hsl(210, 11%, 18%)" >Integrate time tracker tool with 50+ <br> popular services</h1>
+                <span class="fw-medium fs-5 ">TMetric integrates with dozens of services, which lets you measure progress and activity in any tool you use.</span> <br>
+                
+            </div>
 
-    <div class="container-fluid ">
-      <section id="track time" >
-        <div class="container  ">
-          <div class="row justify-content-center">
-            <div class="col-5 ">
-              <h3 class="fs-2 fw-bold mb-4" style="color: hsl(210, 11%, 18%)">
-                Why track time with TMetric
-              </h3>
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-5 mb-5">
+            <div >
+                <button type="button" class="btn btn-primary px-4 py-2 fw-medium ">Start Free Trial</button>
             </div>
-          </div>
-          <div class="row justify-content-center mb-5">
-            <div class="col-8 ">
-              <p class="fs-4 text-start">
-                TMetric helps us to track and manage our work time on different
-                <br />
-                projects. It has provided us with a comprehensive overview of how
-                our <br />
-                time is allocated across various tasks. Its reporting features
-                have been <br> particularly helpful in providing us with valuable
-                insights into our work <br> patterns, which has resulted in increased
-                efficiency and productivity. <br>
-              </p>
-              <div class="row">
-                <div class="col-4">
-                  <hr />
-                </div>
+            <div  style="color: #2865ce">
+                <h5  class="f" style="cursor: pointer" id="read">
+                  <a href="#" class="link-dark text-decoration-none fs-6">Explore All Integrations </a>  <i class="fa-solid fa-arrow-right"></i>
+                </h5>
+
               </div>
-              <div class="row justify-content-between">
-                <div class="col-5 ">
-                  <h5 class="fw-semibold fs-6" style="color: #212d39">
-                    Linda Förster, project manager at Medudy
-                  </h5>
-                </div>
-                <div class="col-3 " style="color: #4082f3">
-                  <h5   style="cursor: pointer" id="read">
-                    <a href="#" class="link-dark text-decoration-none "    >Read Full Story </a>  <i class="fa-solid fa-arrow-right"></i>
-                  </h5>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-2 " style="color: #ffac05">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <img
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-                    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-                "
-                src="https://tmetric.com/media/2nupm14g/software_developers_photo.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-10">
-              <hr />
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-10">
-              <ul class="d-flex justify-content-between list-unstyled mb-5" id="dev">
-                <li><a href="#" class="link-dark text-decoration-none fw-bolder border-top pt-3" style="color: #4082f3 !important; border-color: #4082f3 !important;;" >Software developers</a></li>
-                <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3 ">Marketers</a></li>
-                <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder   border-top pt-3">Designers</a></li>
-                <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Contractors</a></li>
-                <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Consultants</a></li>
-                <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Freelancers</a></li>
-              </ul>
-            </div>
-          </div>
+              
         </div>
         
-      </section>
-      <section id="reviews" class="mt-5" style="background-color: #fff2cc ;">
-        <div class="container justify-content-center" >
-          <div class="row justify-content-center">
+        
+       
+       
+  </div>
+</section>
+<section class="integrations-info">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 justify-content-center">
+        <ul class="gap-5 gap-md-5 gap-lg-3 list list-unstyled" id="logo">
+          <li class="col-6 col-md-3 col-lg-2 ">
+              <a href="#">
+                  <img src="https://tmetric.com/media/dkgp52u1/logo-google-workspace.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/fnbggshs/logo-integration-msoffice.svg" alt="MS Office" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/xw4hqraq/logo-google-keep.svg" alt="Google Keep" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/smflyk5w/logo-integration-github.svg" alt="GitHub" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/kbrcntmi/logo-integration-excel.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/4aeci1fh/logo-integration-asana.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/caxbzjss/logo-integration-jira.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+            <a href="#">
+                <img src="https://tmetric.com/media/aebf4s5m/gitlab-logo-2023.svg" alt="Google Workspace" />
+            </a>
+        </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/zbyntttc/logo-google-docs.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/0bzmfrlf/logo-integration-trello.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/sdaj41fi/logo-integration-redmine.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+              <a href="#">
+                  <img src="https://tmetric.com/media/1xedbfav/logo-integration-zendesk.svg" alt="Google Workspace" />
+              </a>
+          </li>
+          <li class="col-6 col-md-3 col-lg-2">
+            <a href="#">
+                <img src="https://tmetric.com/media/n3dmgi1p/logo-integration-wrike.svg" alt="Google Workspace" />
+            </a>
+        </li>
+      </ul>
+      </div>
+    </div>
+      
+  </div>
+</section>
+<hr>
 
-            <div class="col-6 justify-content-center">
-              <h1 class="mt-5 fw-bolder text-center">Read Hundreds of Reviews
-              </h1><br>
-              <h1 class="text-center"  style="color: #ffac05"> <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i></h1>
-                <h1 class="mt-5 fw-bolder text-center">4.5 Customer Rating
-                </h1>
-                <h1 class="mt-5 fw-bolder text-center mb-5" style="color: #4082f3;">242 Reviews
-                </h1>
+<section id="track time" >
+<div class="container ">
+  <div class="row justify-content-center ">
+    <div class="col-12 mt-5 ">
+      <h3 class=" fs-1 fw-bold mb-4 mt-5 text-center" style="color: hsl(210, 11%, 18%)">
+        Why track time with TMetric
+      </h3>
+    </div>
+  </div>
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-7 col-12">
+      <p class="fs-5 fw-medium">
+        TMetric helps us to track and manage our work time on different 
+       
+        projects. It has provided us with a comprehensive overview of how
+        our 
+        time is allocated across various tasks. Its reporting features
+        have been  particularly helpful in providing us with valuable
+        insights into our work  patterns, which has resulted in increased
+        efficiency and productivity. 
+      </p>
+      <div class="row">
+        <div class="col-4 ">
+          <hr />
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-6 ">
+          <h5 class="fw-semibold fs-6" style="color: #212d39">
+            Linda Förster, project manager at Medudy
+          </h5>
+        </div>
+        <div class="col-3 " style="color: #2865ce">
+          <h5   style="cursor: pointer" id="read">
+            <a href="#" class="link-dark text-decoration-none fs-6"    >Read Full Story </a>  <i class="fa-solid fa-arrow-right"></i>
+          </h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 " style="color: #ffac05">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-2" id="profile">
+      <img
+        style="
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+            rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        "
+        src="https://tmetric.com/media/2nupm14g/software_developers_photo.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <hr />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10   ">
+      <ul class="d-flex flex-wrap justify-content-between list-unstyled  mb-5" id="dev">
+        <li><a href="#" class="link-dark text-decoration-none fw-bolder border-top pt-3" style="color: #4082f3 !important; border-color: #4082f3 !important;;" >Software developers</a></li>
+        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3 ">Marketers</a></li>
+        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder   border-top pt-3">Designers</a></li>
+        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Contractors</a></li>
+        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Consultants</a></li>
+        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top pt-3">Freelancers</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="trusted" style="background-color: #f8f9fa;" >
-        <div class="container d-flex flex-column">
-          <div> <h3 class="text-center fw-bold mt-5 mb-5">Used and trusted by 3000+ businesses in the world</h3></div>
-          <div class="d-flex gap-5 mb-5">
-            <img src="https://tmetric.com/media/wlmpffzm/logo_business_endygo.png" alt=""><img src="https://tmetric.com/media/0ddgehbk/logo_business_itsyndicate.png" alt=""><img src="https://tmetric.com/media/eozchehq/logo_business_pulso.png" alt=""><img src="https://tmetric.com/media/rmvok0xh/logo_business_050media.png" alt=""><img src="https://tmetric.com/media/ccpn231z/logo-business-jot-digi-tal.svg" alt=""><img src="https://tmetric.com/media/z0fhmi1j/logo-business-freshlab.svg" alt=""><img src="https://tmetric.com/media/xjogm2h2/logo-business-mvad.svg" alt="">  <img src="https://tmetric.com/media/nvalaok1/logo_business_swaven.png" alt="">
-          </div>
-         
-         
-        </div>
-      </section>
+</section>
+<section id="reviews" class="mt-5" style="background-color: #fff2cc ;">
+<div class="container justify-content-center" >
+  <div class="row justify-content-center">
+
+    <div class="col-8 justify-content-center">
+      <h1 class="mt-5 fw-bolder text-center">Read Hundreds of Reviews
+      </h1><br>
+      <h1 class="text-center"  style="color: #ffac05"> <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i></h1>
+        <h1 class="mt-5 fw-bolder text-center">4.5 Customer Rating
+        </h1>
+        <h1 class="mt-5 fw-bolder text-center mb-5" style="color: #4082f3;">242 Reviews
+        </h1>
+
+    </div>
+  </div>
+</div>
+</section>
+<section id="trusted" style="background-color: #f8f9fa;" >
+<div class="container ">
+  <div class="row ">
+    <div class="col-md-12">
+      <div> <h3 class="text-center fw-bold mt-5 mb-5">Used and trusted by 3000+ businesses in the world</h3></div>
+      <div class="container-row justify-content-center d-flex flex-wrap gap-2   mb-5">
+        <img src="https://tmetric.com/media/wlmpffzm/logo_business_endygo.png" alt=""><img src="https://tmetric.com/media/0ddgehbk/logo_business_itsyndicate.png" alt=""><img src="https://tmetric.com/media/eozchehq/logo_business_pulso.png" alt=""><img src="https://tmetric.com/media/rmvok0xh/logo_business_050media.png" alt=""><img src="https://tmetric.com/media/ccpn231z/logo-business-jot-digi-tal.svg" alt=""><img src="https://tmetric.com/media/z0fhmi1j/logo-business-freshlab.svg" alt=""><img src="https://tmetric.com/media/xjogm2h2/logo-business-mvad.svg" alt="">  <img src="https://tmetric.com/media/nvalaok1/logo_business_swaven.png" alt="">
+      </div>
     </div>
 
+  </div>
+  
+ 
+ 
+</div>
+</section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"
+></script>
+<!-- Parveen's ends Code -------------------------------------- -->
 <!-- Dhananjay's Code ---------------------------------------------------------------- -->
 <div class="container ">
     <div class=" text-center">
