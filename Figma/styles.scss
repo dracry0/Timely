@@ -1,0 +1,187 @@
+.main {
+    width: 1320px;
+    // height: auto;
+    // top: 1321.5px;
+    // left: 300px;
+    // gap: 0px;
+    // opacity: 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    > .head {
+      display: flex;
+      justify-content: space-between;
+      > h1 {
+        font-family: Inter;
+        font-size: 29.88px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: left;
+        color: #05073c;
+        width: 320.92px;
+        height: 45px;
+        top: 5px;
+        left: 15px;
+        gap: 0px;
+        opacity: 0px;
+      }
+      > span {
+        padding-top: 40px;
+        padding-right: 40px;
+        font-family: Inter;
+        font-size: 14.3px;
+        font-weight: 400;
+        line-height: 28.13px;
+        text-align: left;
+        color: #05073c;
+        width: 44.79px;
+        height: 28.13px;
+        top: 21.88px;
+        left: 1234.41px;
+        gap: 0px;
+        opacity: 0px;
+      }
+    }
+    > .countries {
+      padding-top: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      column-gap: 30px;
+      > .det {
+        p:nth-of-type(1) {
+          padding: 0;
+          margin: 0;
+          padding-top: 20px;
+          font-family: Inter;
+          font-size: 15.25px;
+          font-weight: 500;
+          line-height: 24px;
+          text-align: center;
+          color: #05073c;
+        }
+        > p:nth-of-type(2) {
+          padding: 0;
+          margin: 0;
+          padding-top: 4px;
+          font-family: Inter;
+          font-size: 13.56px;
+          font-weight: 400;
+          line-height: 26.25px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+section {
+    .figma {
+      max-width: 1320px;
+      height: auto;
+      margin: auto;
+      .reviewBG {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        > .box {
+          width: 1320px;
+          height: 610.84px;
+          padding: 0px 345px 0px 345px;
+          position: absolute;
+          top: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          > .reviewhead {
+            display: flex;
+            align-items: center;
+            > h1 {
+              width: 271.5px;
+              height: 45px;
+              left: 524.34px;
+              font-family: Inter;
+              font-size: 29.53px;
+              font-weight: 700;
+              line-height: 45px;
+              text-align: center;
+              color: #05073c;
+            }
+          }
+          > .reviewdetails {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 630px;
+            height: 505.84px;
+            top: 50px;
+            left: 345px;
+           
+            text-align: center;
+            > img:nth-of-type(1) {
+              position: absolute;
+              z-index: 1;
+            }
+  
+            > img:nth-of-type(2) {
+              position: absolute;
+              top: 107px;
+              left: 935px;
+              z-index: 2;
+            }
+            > p:nth-of-type(1) {
+              padding-top: 150px;
+              width: 149.65px;
+              height: 33.75px;
+              top: 170px;
+              left: 240.27px;
+              font-family: Inter;
+              font-size: 17.58px;
+              font-weight: 500;
+              line-height: 33.75px;
+              text-align: center;
+              color: #eb662b;
+            }
+  
+            > p:nth-of-type(2) {
+              padding-top: 10px;
+              font-family: Inter;
+              font-size: 19.53px;
+              font-weight: 500;
+              line-height: 37.5px;
+              text-align: center;
+              color: #05073c;
+            }
+            > p:nth-of-type(3) {
+              padding: 0;
+              margin: 0;
+              width: 84.76px;
+              height: 21px;
+              top: 358.25px;
+              left: 272.72px;
+              font-family: Inter;
+              font-size: 15.75px;
+              font-weight: 500;
+              line-height: 25.6px;
+              text-align: center;
+              color: #05073c;
+            }
+            > p:nth-of-type(4) {
+             
+              width: 54.65px;
+              height: 24px;
+              top: 381.85px;
+              left: 287.77px;
+              font-family: Inter;
+              font-size: 14.3px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+              color: #05073c;
+            }
+          }
+        }
+      }
+    }
+  }
