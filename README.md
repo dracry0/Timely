@@ -20,10 +20,6 @@ Tmetric/
 ├─ Figma/
 ├─ Bootstrap/
 
-
-
-<br>
-
 ## Installation & Getting started
 ```bash
 cd Tmetric
