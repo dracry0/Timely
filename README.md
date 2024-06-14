@@ -1,48 +1,29 @@
 # Timely
+<br>
 
 ## Introduction
 
+Empower your team with time tracking using Timely. Make use of time for collaboration, productivity, and efficiency with our frontend-only application.
+<br>
 
 ## Project Type
-
+FRONTEND ONLY
+<br>
 
 ## Deployed App
-
+<br>
 
 ## Directory Structure
+
+
 Tmetric/
 ├─ Figma/
 ├─ Bootstrap/
 
-
-## Video Walkthrough of the project
-
-
-## Video Walkthrough of the codebase
-
-
-## Features
-
-
-## design decisions or assumptions
-
+<br>
 
 ## Installation & Getting started
-
-
 ```bash
-
 cd Tmetric
-```
+npm install -g bootstrap@5.3.3
 
-## Usage
-
-
-
-
-## Technology Stack
-List and provide a brief overview of the technologies used in the project.
-
-- Node.js
-- Bootstrap
-- HTML
