@@ -129,7 +129,69 @@
 /* Ending of Dhananjay's Code */
 
 /* This is Mihir's Code */
+        .navbar-custom {
+            background-color: #FFF3CD;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
 
+        .container-custom {
+            background-color: #FFF3CD;
+            padding: 2rem;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .started-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+        }
+
+        .started-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .input-group-text {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .input-group .form-control {
+            border-left: 0;
+        }
+
+        .img-right {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .left-content h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .left-content h3 {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007BFF !important;
+        }
 /* Ending of Mihir's Code */
 
 /* This is Surya's Code */
@@ -139,6 +201,86 @@
 </head>
 
 <body>
+ <!-- Mihir's Code----------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/timely.png" alt="Timely Logo" class="logo-fixed">
+            </a>
+            <button class="btn btn-outline-secondary side-button" type="button">EN</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Why Timely</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Apps & Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-link" tabindex="-1" role="button">Log In</a>
+                <a href="#" class="btn btn-outline-primary btn-right" tabindex="-1" role="button">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid container-custom">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 left-content">
+                    <h1>
+                        Empower your <br />
+                        Team with Time <br />
+                        Tracking
+                    </h1>
+                    <h3>
+                        Timely streamlines your team work so you can focus on what <br />
+                        matters
+                    </h3>
+                    <div class="input-group mb-3 mt-2">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+                                <path
+                                    d="M.05 4.555L8 9.267l7.95-4.712A1 1 0 0 0 14 3H2a1 1 0 0 0-.95.555z" />
+                                <path
+                                    d="M8 10.533l-7.95-4.712A1 1 0 0 0 0 6v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-.05-.179L8 10.533z" />
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Enter your email address" aria-label="Email"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                    <div class="started-button-container d-flex align-items-center">
+                        <a href="#" class="started-button" tabindex="-1" role="button">Get Started</a>
+                        <h6 class="mx-3 my-0">Fully Functional 30-Day Trial</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://tmetric.com/media/oaejbiic/img-home-heading.svg" alt="Time Tracking App"
+                        class="img-right">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <!-- Sushant's Code ----------------------------------------------------------------------------- -->
     <div class="container">
         <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5">Best time tracking features for your business</h1>
