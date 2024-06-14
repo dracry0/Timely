@@ -32,6 +32,14 @@
 
        
 /* This is Sushant's Code */
+.expanded {
+            background-color: #e0f7fa !important; 
+            color: #0d47a1 !important; 
+            border-color: #0d47a1 !important; 
+            border-radius: 10px;
+            border-width: 3px; 
+        }
+
 .sidebar {
             position: relative;
             top: 0;
@@ -198,7 +206,69 @@
 /* Ending of Dhananjay's Code */
 
 /* This is Mihir's Code */
+        .navbar-custom {
+            background-color: #FFF3CD;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
 
+        .container-custom {
+            background-color: #FFF3CD;
+            padding: 2rem;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .started-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+        }
+
+        .started-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .input-group-text {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .input-group .form-control {
+            border-left: 0;
+        }
+
+        .img-right {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .left-content h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .left-content h3 {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007BFF !important;
+        }
 /* Ending of Mihir's Code */
 
 /* This is Surya's Code */
@@ -208,6 +278,89 @@
 </head>
 
 <body>
+ <!-- Mihir's Code----------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/timely.png" alt="Timely Logo" class="logo-fixed">
+            </a>
+            <button class="btn btn-outline-secondary side-button" type="button">EN</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Why Timely</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Apps & Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-link" tabindex="-1" role="button">Log In</a>
+                <a href="#" class="btn btn-outline-primary btn-right" tabindex="-1" role="button">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid container-custom">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 left-content">
+                    <h1>
+                        Empower your <br />
+                        Team with Time <br />
+                        Tracking
+                    </h1>
+                    <h3>
+                        Timely streamlines your team work so you can focus on what <br />
+                        matters
+                    </h3>
+                    <div class="input-group mb-3 mt-2">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+                                <path
+                                    d="M.05 4.555L8 9.267l7.95-4.712A1 1 0 0 0 14 3H2a1 1 0 0 0-.95.555z" />
+                                <path
+                                    d="M8 10.533l-7.95-4.712A1 1 0 0 0 0 6v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6a1 1 0 0 0-.05-.179L8 10.533z" />
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Enter your email address" aria-label="Email"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                    <div class="started-button-container d-flex align-items-center">
+                        <a href="#" class="started-button" tabindex="-1" role="button">Get Started</a>
+                        <h6 class="mx-3 my-0">Fully Functional 30-Day Trial</h6>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://tmetric.com/media/oaejbiic/img-home-heading.svg" alt="Time Tracking App"
+                        class="img-right">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Sushant's Code ----------------------------------------------------------------------------- -->
+    <div class="container">
+        <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5">Best time tracking features for your business</h1>
 
     <!-- Mihir's Code------------------------------------------------------------------------------>
 
@@ -219,7 +372,7 @@
         <div class="row my-5">
 
         <h1 class="fw-bold text-center mt-5 mb-4 font text-black pad px-0 py-5 ">Best time tracking features for your business</h1>
-        
+
         <div class="row my-5 py-5 px-0">
             <div class="col-md-8">
                 <img id="time-tracking-img" src="https://tmetric.com/media/pszkp4ly/image-time-page.svg"
@@ -237,44 +390,44 @@
             </div>
             <div class="col-md-4 sidebar">
                 <div class="list-group" id="sidebar-menu">
-                    <div class="list-group-item list-group-item-action active" onclick="showContent('time-tracking')">
-                        Time Tracking
+                    <div class="list-group-item list-group-item-action active expanded " onclick="showContent('time-tracking')">
+                        <h5 style="font-weight: bolder;">Time Tracking</h5>
                         <div id="time-tracking" class="content-section" style="display: block;">
                             <p>Capture every task you work on. Take control over time intervals by simple time tracking</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('project-management')">
-                        Project Management
-                        <div id="project-management" class="content-section">
+                        <h5 style="font-weight: bolder;">Project Management</h5>
+                        <div id="project-management" class="content-section" style="display: none;">
                             <p>Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see the project progress at a glance, collaborate easily, keep deadlines and prevent over budgeting</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('team-management')">
-                        Team Management
-                        <div id="team-management" class="content-section">
+                        <h5 style="font-weight: bolder;">Team Management</h5>
+                        <div id="team-management" class="content-section" style="display: none;">
                             <p>Measure productivity and activity level of your team, assign tasks in a click, monitor workflow and distribute the workload. Syncs your teams’ work and improves efficiency.</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('billing-invoicing')">
-                        Billing & Invoicing
-                        <div id="billing-invoicing" class="content-section">
+                        <h5 style="font-weight: bolder;"> Billing & Invoicing</h5>
+                        <div id="billing-invoicing" class="content-section" style="display: none;">
                             <p>With the accurate billing system, set billable rates and easily create an invoice based on tracked time and expenses, and get paid promptly.</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('reporting')">
-                        Reporting
-                        <div id="reporting" class="content-section">
+                        <h5 style="font-weight: bolder;">Reporting</h5>
+                        <div id="reporting" class="content-section" style="display: none;">
                             <p>With a flexible reporting system, you have a choice to get insights into your projects and team productivity, analyze incomes and keep costs under control</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
                     </div>
                     <div class="list-group-item list-group-item-action" onclick="showContent('time-off')">
-                        Time Off
-                        <div id="time-off" class="content-section">
+                        <h5 style="font-weight: bolder;">Time Off</h5>
+                        <div id="time-off" class="content-section" style="display: none;">
                             <p>Add a PTO policy for your organization, simply ask for days off, control missed workdays, manage balances and teams attendance hassle-free</p>
                             <a href="#" class="learn-more">Learn More --></a>
                         </div>
@@ -293,7 +446,7 @@
 
             var listItems = document.querySelectorAll('.list-group-item');
             listItems.forEach(function (item) {
-                item.classList.remove('active');
+                item.classList.remove('active', 'expanded');
             });
 
             var targetContent = document.getElementById(sectionId);
@@ -310,7 +463,7 @@
             }
 
             var listItem = document.querySelector('[onclick="showContent(\'' + sectionId + '\')"]');
-            listItem.classList.add('active');
+            listItem.classList.add('active', 'expanded');
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -1045,6 +1198,10 @@ crossorigin="anonymous"
 
         </div>
     </div>
+    <!-- End of Dhananjay's code -->
+<!-- 
+    Mihir's code -->
+    <!-- end of Mihir's code -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
