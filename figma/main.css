@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+input::-moz-placeholder {
+  font-size: 14.53px;
+  font-weight: 400;
+  line-height: 17.59px;
+  text-align: left;
+}
+
+input::placeholder {
+  font-size: 14.53px;
+  font-weight: 400;
+  line-height: 17.59px;
+  text-align: left;
+}
+
+.containerf {
+  width: 100vw;
+  height: 723.25px;
+  background-image: url(/bg.svg.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(5, 7, 60);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.containers {
+  width: 1320px;
+  height: 655.13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.speak {
+  width: 1290px;
+  height: 185.13px;
+  display: flex;
+  gap: 592.72px;
+  border-bottom: 1px solid rgba(235, 102, 43, 0.15);
+}
+
+.company {
+  width: 1320px;
+  height: 470px;
+  display: flex;
+  gap: 100.72px;
+  margin-top: 39.99px;
+}
+
+#our {
+  width: 372.76px;
+  height: 26px;
+  margin: 94.31px 64.82px 0 80px;
+}
+#our span:nth-last-of-type(1) {
+  font-size: 19.69px;
+  font-weight: 500;
+  line-height: 37.5px;
+  text-align: left;
+}
+
+#us {
+  width: 77px;
+  height: 31.88px;
+  margin: 84.06px 69.19px 169.8px 0;
+}
+#us span:nth-of-type(1) {
+  font-size: 16.2px;
+  font-weight: 500;
+  line-height: 31.88px;
+  text-align: left;
+}
+
+.contact, .legal, .support, .news {
+  width: auto;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 15px;
+  padding-top: 20px;
+  gap: 29px;
+}
+.contact h5, .legal h5, .support h5, .news h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+.contact ul, .legal ul, .support ul, .news ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18.12px;
+}
+.contact li, .legal li, .support li, .news li {
+  list-style-type: none;
+}
+.contact a, .legal a, .support a, .news a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.news input {
+  width: 300px;
+  padding: 20px 21px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+#hold {
+  position: relative;
+}
+#hold button {
+  position: absolute;
+  top: 34%;
+  right: 10%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 14.53px;
+  font-weight: 400;
+}
+
+#app li {
+  margin-left: 26px;
+}
+
+.containere {
+  width: 100vw;
+  height: 68.12px;
+  background-color: #05073c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy {
+  width: 1320px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copy .logos {
+  display: flex;
+  width: auto;
+  height: auto;
+}
+.copy .logos img {
+  width: 48px;
+  height: 24px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,132 @@
+.containerf {
+    width: 100vw;
+    height: 723.25px;
+    background-image: url(/bg.svg.svg);
+    background-position: center;
+    background-size: cover;
+    background-color: $primary-color;
+    @include flex-center(column);
+    color: $secondary-color;
+  }
+  
+  .containers {
+    width: $container-width;
+    height: 655.13px;
+    @include flex-center(column);
+  }
+  
+  .speak {
+    width: 1290px;
+    height: 185.13px;
+    display: flex;
+    gap: 592.72px;
+    border-bottom: 1px solid $accent-color;
+  }
+  
+  .company {
+    width: $container-width;
+    height: 470px;
+    display: flex;
+    gap: 100.72px;
+    margin-top: 39.99px;
+  }
+  
+  #our {
+    width: 372.76px;
+    height: 26px;
+    margin: 94.31px 64.82px 0 80px;
+  
+    span:nth-last-of-type(1) {
+      @include font-style(19.69px, 500, 37.5px);
+    }
+  }
+  
+  #us {
+    width: 77px;
+    height: 31.88px;
+    margin: 84.06px 69.19px 169.8px 0;
+  
+    span:nth-of-type(1) {
+      @include font-style(16.2px, 500, 31.88px);
+    }
+  }
+  
+  .contact, .legal, .support, .news {
+    width: auto;
+    height: 390px;
+    @include flex-center(column, flex-start, flex-start);
+    padding-left: 15px;
+    padding-top: 20px;
+    gap: 29px;
+  
+    h5 {
+      @include font-style(20px, 500, 30px);
+    }
+  
+    ul {
+      @include flex-center(column, flex-start, flex-start);
+      gap: 18.12px;
+    }
+  
+    li {
+      list-style-type: none;
+    }
+  
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+  
+  .news input {
+    width: 300px;
+    padding: 20px 21px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+  }
+  
+  #hold {
+    position: relative;
+  
+    button {
+      position: absolute;
+      top: 34%;
+      right: 10%;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font-size: $button-font-size;
+      font-weight: $button-font-weight;
+    }
+  }
+  
+  #app li {
+    margin-left: 26px;
+  }
+  
+  .containere {
+    width: 100vw;
+    height: 68.12px;
+    background-color: $background-color;
+    @include flex-center(row, center);
+  }
+  
+  .copy {
+    width: $container-width;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .logos {
+      display: flex;
+      width: auto;
+      height: auto;
+  
+      img {
+        width: 48px;
+        height: 24px;
+      }
+    }
+  }
+  
