@@ -18,7 +18,7 @@ Frontend: https://timely-facebook-futurists-089.netlify.app/
 # Bootstrap Directory Structure
 
 # Bootstrap Directory Structure
-
+```
 bootstrap/
 ├─ index.html
 ├─ index.js
@@ -26,6 +26,7 @@ bootstrap/
 ├─ package.json
 ├─ Assets/
 │  ├─ ...
+```
 
 <br>
    
