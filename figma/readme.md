@@ -17,7 +17,7 @@ Frontend: https://figma-facebook-futureists-089.netlify.app
 <br>
 
 ## Directory Structure
-***
+```
 figma/
 ├─ index.html
 ├─ styles.css
@@ -25,7 +25,7 @@ figma/
 ├─ styles.scss
 ├─ Assets/
     ├─ .... 
-***
+```
 <br>
    
 ## Video Walkthrough of the project
