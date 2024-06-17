@@ -37,7 +37,7 @@ figma/
 <br>
 
 ## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
+[Here's](https://youtu.be/KtQOySKRGS4) a video walkthrough of the codebase
 <br>
 
 ## Getting started
