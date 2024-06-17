@@ -48,7 +48,8 @@ cd figma
 <br>
 
 ## Usage
-Enter the figma directory and open Website with Live server or you can open the deployed link(https://figma-facebook-futureists-089.netlify.app/)
+Enter the figma directory and open Website with Live server OR 
+you can open the deployed link(https://figma-facebook-futureists-089.netlify.app/)
 
 <br>
 
