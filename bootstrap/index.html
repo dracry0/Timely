@@ -1,467 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    
+    <link rel="icon" href="./assets/favicon.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+    <title>Timely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <style>
-
-
-
-       
-/* This is Sushant's Code */
-.award-badge {
-        max-width: 150px;
-        margin: 10px;
-      }
-
-      .awards-wrapper {
-        overflow: hidden;
-        position: relative;
-        height: 200px; /* Adjust the height as needed */
-      }
-
-      .awards-container {
-        display: flex;
-        align-items: center;
-        animation: scroll 20s linear infinite;
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
+        /* This is Sushant's Code */
+        .award-badge {
+            max-width: 150px;
+            margin: 10px;
         }
 
-        100% {
-          transform: translateX(-50%);
+        .awards-wrapper {
+            overflow: hidden;
+            position: relative;
+            height: 200px;
         }
-      }
 
-      .awards-wrapper::before,
-      .awards-wrapper::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100px;
-        z-index: 1;
-      }
+        .awards-container {
+            display: flex;
+            align-items: center;
+            animation: scroll 20s linear infinite;
+        }
 
-      .awards-wrapper::before {
-        left: 0;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 1),
-          rgba(255, 255, 255, 0)
-        );
-      }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
 
-      .awards-wrapper::after {
-        right: 0;
-        background: linear-gradient(
-          to left,
-          rgba(255, 255, 255, 1),
-          rgba(255, 255, 255, 0)
-        );
-      }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
-      .expanded {
-        background-color: #e0f7fa !important;
-        color: #0d47a1 !important;
-        border-color: #0d47a1 !important;
-        border-width: 3px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+        .awards-wrapper::before,
+        .awards-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 1;
+        }
 
-      .sidebar {
-        position: relative;
-        top: 0;
-      }
+        .awards-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right,
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 0));
+        }
 
-      .content-section {
-        display: none;
-      }
+        .awards-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left,
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 0));
+        }
 
-      .list-group-item {
-        cursor: pointer;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        border-width: 2px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
+        .expanded {
+            background-color: #e0f7fa !important;
+            color: #0d47a1 !important;
+            border-color: #0d47a1 !important;
+            border-width: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-      .list-group-item.active {
-        background-color: #f8f9fa;
-        color: #000;
-      }
+        .sidebar {
+            position: relative;
+            top: 0;
+        }
 
-      .list-group-item:first-child {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
+        .content-section {
+            display: none;
+        }
 
-      .list-group-item:last-child {
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
+        .list-group-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border-width: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-      .content-section p {
-        margin-top: 10px;
-      }
+        .list-group-item.active {
+            background-color: #f8f9fa;
+            color: #000;
+        }
 
-      .content-section .learn-more {
-        display: block;
-        margin-top: 15px;
-        color: #007bff;
-        text-decoration: none;
+        .list-group-item:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .list-group-item:last-child {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .content-section p {
+            margin-top: 10px;
+        }
+
+        .content-section .learn-more {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+
+        }
+
+        .content-section .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-weight: bolder;
+
+        }
+
+        .sidebar-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 30px;
+        }
+
+        .list-group-item-action h5 {
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        /* Ending of Sushant's Code */
+
+        /* This is Parveen's Code */
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0px;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .integrations-info .list {
+            padding: 6px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .integrations-info .list li {
+            width: 144px;
+        }
+
+        .integrations-info .list a {
+            display: block;
+            border: 1px solid #e2e7eb;
+            border-radius: 12px;
+            padding-bottom: calc(100% - 2px);
+            position: relative;
+            background: #fff;
+            transition: all 0.5s ease;
+        }
+
+        .integrations-info .list a img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 18px);
+        }
+
+        #read a {
+            color: #4082f3 !important;
+        }
+
+        #read a:hover {
+            color: #2564d0 !important;
+        }
+
+        #dev li a:hover {
+            color: #4082f3 !important;
+        }
+
+        #dev li a:active {
+            color: #2564d0 !important;
+            border-color: #2564d0 !important;
+        }
+
+        #logo li {
+            cursor: pointer;
+        }
+
+        #logo li:hover {
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                rgba(17, 17, 26, 0.1) 0px 16px 56px,
+                rgba(17, 17, 26, 0.1) 0px 24px 80px !important;
+        }
+
+        .container {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        @media (width<=768px) {
+
+            #profile,
+            .time,
+            #dev {
+                display: none !important;
+
+            }
+        }
+
+        /* Ending of Parveen's Code */
+
+        /* This is Dhananjay's Code */
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+
+            box-sizing: border-box;
+        }
+
+        .bg-light {
+            background: #EBEDF0;
+        }
+
+        .bg-violet {
+            background: #45388f;
+        }
+
+        .font {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+
+        }
+
+
+        .copyright {
+            position: absolute;
+            transform: translateY(-80%)
+        }
+
+        @media only screen and (max-width: 1023px) {
+            .copyright {
+                position: relative;
+                margin-top: 20px;
+                transform: translateY(0)
+            }
+        }
+
+        @media(min-width: 1440px) {
+            .col-lg-3 {
+                flex: 0 0 16.66666667%;
+                max-width: 16.66666667%;
+            }
+        }
+
+
+        #accordion .card {
+            border: none !important;
+        }
+
+        @media (min-width: 576px) {
+
+            .d-sm-flex,
+            .d-none {
+                display: flex !important;
+            }
+        }
+
+        .d {
+            display: none !important;
+        }
+
+        /* Ending of Dhananjay's Code */
+
+        /* This is Mihir's Code */
+        .navbar-custom {
+            background-color: #FFF3CD;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .container-custom {
+            background-color: #FFF3CD;
+            padding: 2rem;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .started-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+        }
+
+        .started-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .input-group-text {
+            background-color: #f8f8f8;
+            color: white;
+        }
+
+        .input-group .form-control {
+            border-left: 0;
+        }
+
+        .img-right {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .left-content h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .left-content h3 {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007BFF !important;
+        }
+
+        .logo-fixed {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Ending of Mihir's Code */
+
+        /* This is Surya's Code */
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .integrations-info .list {
+            padding: 6px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .integrations-info .list li {
+            width: 144px;
+        }
+
+        .integrations-info .list a {
+            display: block;
+            border: 1px solid #e2e7eb;
+            border-radius: 12px;
+            padding-bottom: calc(100% - 2px);
+            position: relative;
+            background: #fff;
+            transition: all 0.5s ease;
+        }
+
+        .integrations-info .list a img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 18px);
+        }
+
+        #read a {
+            color: #4082f3 !important;
+        }
+
+        #read a:hover {
+            color: #2564d0 !important;
+        }
+
+        #dev li a:hover {
+            color: #4082f3 !important;
+        }
+
+        #dev li a:active {
+            color: #2564d0 !important;
+            border-color: #2564d0 !important;
+        }
+
+        #logo li {
+            cursor: pointer;
+        }
+
+        #logo li:hover {
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px !important;
+        }
+
+        @media (width<=768px) {
+
+            #profile,
+            .time,
+            #nav-img {
+                display: none !important;
+
+            }
+        }
+
+
         
-      }
-
-      .content-section .learn-more:hover {
-        text-decoration: underline;
-      }
-
-      h1 {
-        font-weight: bolder;
-       
-      }
-
-      .sidebar-icon {
-        width: 40px; /* Adjust width of the icons as needed */
-        height: 40px; /* Adjust height of the icons as needed */
-        margin-right: 30px; /* Space between icon and title */
-      }
-
-      .list-group-item-action h5 {
-        flex-grow: 1; /* Allow title to take remaining space */
-        overflow: hidden; /* Hide overflow text if necessary */
-        white-space: nowrap; /* Prevent title from wrapping */
-        text-overflow: ellipsis; 
-      }
-/* Ending of Sushant's Code */
-
-/* This is Parveen's Code */
-*::before,
-*::after {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-      body {
-        font-family: "Open Sans", sans-serif;
-        margin: 0px;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
-      }
-     
-      .integrations-info .list {
-        padding: 6px 0 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .integrations-info .list li {
-        width: 144px;
-      }
-      .integrations-info .list a {
-        display: block;
-        border: 1px solid #e2e7eb;
-        border-radius: 12px;
-        padding-bottom: calc(100% - 2px);
-        position: relative;
-        background: #fff;
-        transition: all 0.5s ease;
-      }
-      .integrations-info .list a img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(100% - 18px);
-      }
-      #read a {
-        color: #4082f3 !important;
-      }
-
-      #read a:hover {
-        color: #2564d0 !important;
-      }
-
-      #dev li a:hover {
-        color: #4082f3 !important;
-      }
-      #dev li a:active {
-        color: #2564d0 !important;
-        border-color: #2564d0 !important;
-      }
-      #logo li {
-        cursor: pointer;
-      }
-      #logo li:hover {
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
-          rgba(17, 17, 26, 0.1) 0px 16px 56px,
-          rgba(17, 17, 26, 0.1) 0px 24px 80px !important;
-      }
-      .container {
-    width: 100%; /* Prevent container from exceeding viewport width */
-    overflow-x: hidden; /* Ensure no horizontal scroll within container */
-}
-
-      @media (width<=768px) {
-        #profile,.time,#dev {
-          display: none !important;
-
+        ul {
+            padding-left: 0;
+           
         }
-      }
- 
-/* Ending of Parveen's Code */
 
-/* This is Dhananjay's Code */
-      
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+            
+        }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-
-    box-sizing: border-box;
-}
-.bg-light{
-    background: #EBEDF0;
-}
-.bg-violet {
-    background: #45388f;
-}
-
-.font {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-
-}
-
-
-.copyright {
-    position: absolute;
-    transform: translateY(-80%)
-}
-
-@media only screen and (max-width: 1023px) {
-    .copyright {
-        position: relative;
-        margin-top: 20px;
-        transform: translateY(0)
-    }
-}
-
-@media(min-width: 1440px) {
-    .col-lg-3 {
-        flex: 0 0 16.66666667%;
-        max-width: 16.66666667%;
-    }
-}
-
-
-#accordion .card {
-    border: none !important;
-}
-
-@media (min-width: 576px) {
-    .d-sm-flex , .d-none{
-        display: flex !important;
-    }
-}
-
-.d {
-    display: none !important;
-}
-/* Ending of Dhananjay's Code */
-
-/* This is Mihir's Code */
-.navbar-custom {
-    background-color: #FFF3CD;
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-}
-
-.container-custom {
-    background-color: #FFF3CD;
-    padding: 2rem;
-}
-
-.content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.started-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 0.5rem 2rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-}
-
-.started-button:hover {
-    background-color: #0056b3;
-    color: white;
-}
-
-.input-group-text {
-    background-color: #f8f8f8;
-    color: white;
-}
-
-.input-group .form-control {
-    border-left: 0;
-}
-
-.img-right {
-    max-width: 100%;
-    height: auto;
-}
-
-.left-content h1 {
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.left-content h3 {
-    margin-bottom: 1.5rem;
-    color: #6c757d;
-}
-
-.left-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #007BFF !important;
-}
-
-.logo-fixed {
-    width: 200px;
-    height: auto; /* This ensures the aspect ratio is maintained */
-}
-/* Ending of Mihir's Code */
-
-/* This is Surya's Code */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
-.integrations-info .list {
-    padding: 6px 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.integrations-info .list li {
-    width: 144px;
-}
-
-.integrations-info .list a {
-    display: block;
-    border: 1px solid #e2e7eb;
-    border-radius: 12px;
-    padding-bottom: calc(100% - 2px);
-    position: relative;
-    background: #fff;
-    transition: all 0.5s ease;
-}
-
-.integrations-info .list a img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 18px);
-}
-
-#read a {
-    color: #4082f3 !important;
-}
-
-#read a:hover {
-    color: #2564d0 !important;
-}
-
-#dev li a:hover {
-    color: #4082f3 !important;
-}
-
-#dev li a:active {
-    color: #2564d0 !important;
-    border-color: #2564d0 !important;
-}
-
-#logo li {
-    cursor: pointer;
-}
-
-#logo li:hover {
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px !important;
-}
-
-@media (width<=768px) {
-    #profile, .time,#nav-img {
-        display: none !important;
-        
-    }
-}
-
-
-/* Additional CSS to fix the spacing issue */
-ul {
-    padding-left: 0; /* Optional: remove default padding of ul if needed */
-}
-
-ul li {
-    margin: 0;
-    padding: 0;
-    list-style-position: inside; /* Ensures bullets are inside the li element */
-}
-
-ul li a {
-    padding: 0;
-    margin: 0;
-    text-decoration: none; /* Ensures no extra space for underline */
-}
-
+        ul li a {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            
+        }
     </style>
 </head>
 
 <body>
- <!-- Mihir's Code----------------------------------------------------------------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-custom"  id="navbar">
+    <!-- Mihir's Code----------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-custom" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/Timely_Nav_logo.png" alt="Timely Logo" class="logo-fixed img-fluid">
+                <img src="./assets/Timely_Nav_logo.svg" alt="Timely Logo" class="logo-fixed img-fluid">
             </a>
             <button class="btn btn-outline-secondary side-button" type="button">EN</button>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -486,7 +493,8 @@ ul li a {
                         <a class="nav-link" href="#">Blog</a>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-link  text-decoration-none text-black fw-bold" tabindex="-1" role="button">Log In</a>
+                <a href="#" class="btn btn-link  text-decoration-none text-black fw-bold" tabindex="-1"
+                    role="button">Log In</a>
                 <a href="#" class="btn btn-outline-primary btn-right fw-bold" tabindex="-1" role="button">Sign Up</a>
             </div>
         </div>
@@ -509,19 +517,17 @@ ul li a {
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-envelope" style="color: #3070F0;"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="Enter your email address" aria-label="Email"
-                            aria-describedby="basic-addon1" />
+                        <input type="text" class="form-control" placeholder="Enter your email address"
+                            aria-label="Email" aria-describedby="basic-addon1" />
                     </div>
-                    <div class="flex-wrap   started-button-container d-flex align-items-center overflow-x-hidden "  >
+                    <div class="flex-wrap   started-button-container d-flex align-items-center overflow-x-hidden ">
                         <a href="#" class="started-button mb-3" tabindex="-1" role="button">Get Started</a>
                         <h6 class="mx-3 my-0 mb-3">Fully Functional 30-Day Trial</h6>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center " data-aos="fade-left"
-                data-aos-anchor="#example-anchor"
-                data-aos-offset="500"
-                data-aos-duration="1500" id="nav-img">
-                    <img  src="https://tmetric.com/media/oaejbiic/img-home-heading.svg" alt="Time Tracking App"
+                    data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500" id="nav-img">
+                    <img src="./assets/img-home-heading.svg" alt="Time Tracking App"
                         class="img-right img-fluid">
                 </div>
             </div>
@@ -534,963 +540,1052 @@ ul li a {
 
 
 
-<!-- Sushant's Code ------------------------------------------------------------------------------ -->
-<div class="container mt-5">
-    <div class="awards-wrapper">
-        <div class="awards-container">
-            <img src="https://tmetric.com/media/1szev2ml/saasworthy_badge_2023.png" alt="Award 1" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/ictk4sl0/goodfirms_badge.png" alt="Award 2" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/v3pnl0hw/crozdesk_badge_2023.png" alt="Award 3" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/0sqdh1qx/g2_badge_2023.png" alt="Award 4" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/cwnfzugf/icon-capterra-shortlist.png" alt="Award 5" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/psxgf3r4/icon-software-advice-frontrunners.png" alt="Award 6" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/jfxavlps/getapp-logotype.svg" alt="Award 7" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/1szev2ml/saasworthy_badge_2023.png" alt="Award 1" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/ictk4sl0/goodfirms_badge.png" alt="Award 2" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/v3pnl0hw/crozdesk_badge_2023.png" alt="Award 3" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/0sqdh1qx/g2_badge_2023.png" alt="Award 4" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/cwnfzugf/icon-capterra-shortlist.png" alt="Award 5" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/psxgf3r4/icon-software-advice-frontrunners.png" alt="Award 6" class="award-badge img-fluid" />
-            <img src="https://tmetric.com/media/jfxavlps/getapp-logotype.svg" alt="Award 7" class="award-badge img-fluid" />
+    <!-- Sushant's Code ------------------------------------------------------------------------------ -->
+    <div class="container mt-5">
+        <div class="awards-wrapper">
+            <div class="awards-container">
+                <img src="./assets/logos/saasworthy_badge_2023.svg" alt="Award 1"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/ictk4sl0/goodfirms_badge.png" alt="Award 2"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/v3pnl0hw/crozdesk_badge_2023.png" alt="Award 3"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/0sqdh1qx/g2_badge_2023.png" alt="Award 4"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/cwnfzugf/icon-capterra-shortlist.png" alt="Award 5"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/psxgf3r4/icon-software-advice-frontrunners.png" alt="Award 6"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/jfxavlps/getapp-logotype.svg" alt="Award 7"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/1szev2ml/saasworthy_badge_2023.png" alt="Award 1"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/ictk4sl0/goodfirms_badge.png" alt="Award 2"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/v3pnl0hw/crozdesk_badge_2023.png" alt="Award 3"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/0sqdh1qx/g2_badge_2023.png" alt="Award 4"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/cwnfzugf/icon-capterra-shortlist.png" alt="Award 5"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/psxgf3r4/icon-software-advice-frontrunners.png" alt="Award 6"
+                    class="award-badge img-fluid" />
+                <img src="https://tmetric.com/media/jfxavlps/getapp-logotype.svg" alt="Award 7"
+                    class="award-badge img-fluid" />
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container text-center">
-    <div class="row my-2" >
-        <h1 class="fw-bold text-center mt-5  font text-black pad px-0 py-5" data-aos="fade-up"data-aos-duration="1000">
-            Best time tracking features for your business
-        </h1>
-        <div class="row  py-2 px-0">
-            <div class="col-md-8" >
-                <img id="time-tracking-img" data-aos="fade-right"data-aos-offset="400" data-aos-easing="ease-in-sine" src="https://tmetric.com/media/pszkp4ly/image-time-page.svg" alt="Time Tracking" class="img-fluid"  />
-                <img id="project-management-img" data-aos="fade-right"data-aos-offset="400" data-aos-easing="ease-in-sine" src="https://tmetric.com/media/epxhwygn/img-advantages-project-management.svg" alt="Project Management" class="img-fluid" style="display: none" data-aos="fade-right"data-aos-offset="400" data-aos-easing="ease-in-sine"/>
-                <img id="team-management-img" src="https://tmetric.com/media/ef3fhhpb/img-advantages-team-management.svg" alt="Team Management" class="img-fluid" style="display: none" />
-                <img id="billing-invoicing-img" src="https://tmetric.com/media/hoqdfeg5/img-advantages-invoice.svg" alt="Billing & Invoicing" class="img-fluid" style="display: none" />
-                <img id="reporting-img" src="https://tmetric.com/media/dc0o2m4j/img-advantages-reporting.svg" alt="Reporting" class="img-fluid" style="display: none" />
-                <img id="time-off-img" src="https://tmetric.com/media/eovjubmf/img-advantages-time-off.svg" alt="Time Off" class="img-fluid" style="display: none" />
-            </div>
-            <div class="col-md-4 sidebar ps-5 py-5 ">
-                <div class="list-group" id="sidebar-menu" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="list-group-item list-group-item-action active expanded" data-section="time-tracking" >
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/2p4n4oyc/icon-timer-blue.svg" alt="Time Tracking Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Time Tracking</h5>
+    <div class="container text-center">
+        <div class="row my-2">
+            <h1 class="fw-bold text-center mt-5  font text-black pad px-0 py-5" data-aos="fade-up"
+                data-aos-duration="1000">
+                Best time tracking features for your business
+            </h1>
+            <div class="row  py-2 px-0">
+                <div class="col-md-8">
+                    <img id="time-tracking-img" data-aos="fade-right" data-aos-offset="400"
+                        data-aos-easing="ease-in-sine" src="./assets/image-time-page.svg"
+                        alt="Time Tracking" class="img-fluid" />
+                    <img id="project-management-img" data-aos="fade-right" data-aos-offset="400"
+                        data-aos-easing="ease-in-sine"
+                        src="./assets/img-advantages-project-management.svg"
+                        alt="Project Management" class="img-fluid" style="display: none" data-aos="fade-right"
+                        data-aos-offset="400" data-aos-easing="ease-in-sine" />
+                    <img id="team-management-img"
+                        src="./assets/img-advantages-team-management.svg"
+                        alt="Team Management" class="img-fluid" style="display: none" />
+                    <img id="billing-invoicing-img" src="./assets/img-advantages-invoice.svg"
+                        alt="Billing & Invoicing" class="img-fluid" style="display: none" />
+                    <img id="reporting-img" src="./assets/img-advantages-reporting.svg"
+                        alt="Reporting" class="img-fluid" style="display: none" />
+                    <img id="time-off-img" src="./assets/img-advantages-time-off.svg"
+                        alt="Time Off" class="img-fluid" style="display: none" />
+                </div>
+                <div class="col-md-4 sidebar ps-5 py-5 ">
+                    <div class="list-group" id="sidebar-menu" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="list-group-item list-group-item-action active expanded"
+                            data-section="time-tracking">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/2p4n4oyc/icon-timer-blue.svg"
+                                    alt="Time Tracking Icon" class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Time Tracking
+                                </h5>
+                            </div>
+                            <div id="time-tracking" class="content-section" style="display: block">
+                                <p>Capture every task you work on. Take control over time intervals by simple time
+                                    tracking</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
-                        <div id="time-tracking" class="content-section" style="display: block">
-                            <p>Capture every task you work on. Take control over time intervals by simple time tracking</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
+                        <div class="list-group-item list-group-item-action" data-section="project-management">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/1niddz51/icon-project-blue.svg"
+                                    alt="Project Management Icon" class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Project
+                                    Management</h5>
+                            </div>
+                            <div id="project-management" class="content-section" style="display: none">
+                                <p>Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see
+                                    the project progress at a glance, collaborate easily, keep deadlines and prevent
+                                    over budgeting</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="list-group-item list-group-item-action" data-section="project-management">
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/1niddz51/icon-project-blue.svg" alt="Project Management Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Project Management</h5>
+                        <div class="list-group-item list-group-item-action" data-section="team-management">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/2gxihhdu/icon-team-blue.svg"
+                                    alt="Team Management Icon" class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Team Management
+                                </h5>
+                            </div>
+                            <div id="team-management" class="content-section" style="display: none">
+                                <p>Measure productivity and activity level of your team, assign tasks in a click,
+                                    monitor workflow and distribute the workload. Syncs your teams’ work and improves
+                                    efficiency.</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
-                        <div id="project-management" class="content-section" style="display: none">
-                            <p>Create projects, set rates and budgets. Keep tracking of hours spent on tasks and see the project progress at a glance, collaborate easily, keep deadlines and prevent over budgeting</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
+                        <div class="list-group-item list-group-item-action" data-section="billing-invoicing">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/s4koycnp/icon-invoice-blue.svg"
+                                    alt="Billing & Invoicing Icon" class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Billing &
+                                    Invoicing</h5>
+                            </div>
+                            <div id="billing-invoicing" class="content-section" style="display: none">
+                                <p>With the accurate billing system, set billable rates and easily create an invoice
+                                    based on tracked time and expenses, and get paid promptly.</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="list-group-item list-group-item-action" data-section="team-management">
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/2gxihhdu/icon-team-blue.svg" alt="Team Management Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Team Management</h5>
+                        <div class="list-group-item list-group-item-action" data-section="reporting">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/yoblhiut/icon-reports-blue.svg" alt="Reporting Icon"
+                                    class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0; margin-left: -15px ;">Reporting</h5>
+                            </div>
+                            <div id="reporting" class="content-section" style="display: none">
+                                <p>With a flexible reporting system, you have a choice to get insights into your
+                                    projects and team productivity, analyze incomes and keep costs under control</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
-                        <div id="team-management" class="content-section" style="display: none">
-                            <p>Measure productivity and activity level of your team, assign tasks in a click, monitor workflow and distribute the workload. Syncs your teams’ work and improves efficiency.</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
-                        </div>
-                    </div>
-                    <div class="list-group-item list-group-item-action" data-section="billing-invoicing">
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/s4koycnp/icon-invoice-blue.svg" alt="Billing & Invoicing Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Billing & Invoicing</h5>
-                        </div>
-                        <div id="billing-invoicing" class="content-section" style="display: none">
-                            <p>With the accurate billing system, set billable rates and easily create an invoice based on tracked time and expenses, and get paid promptly.</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
-                        </div>
-                    </div>
-                    <div class="list-group-item list-group-item-action" data-section="reporting">
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/yoblhiut/icon-reports-blue.svg" alt="Reporting Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Reporting</h5>
-                        </div>
-                        <div id="reporting" class="content-section" style="display: none">
-                            <p>With a flexible reporting system, you have a choice to get insights into your projects and team productivity, analyze incomes and keep costs under control</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
-                        </div>
-                    </div>
-                    <div class="list-group-item list-group-item-action" data-section="time-off">
-                        <div class="d-flex align-items-center">
-                            <img src="https://tmetric.com/media/cajpa4uy/icon-time-off-blue.svg" alt="Time Off Icon" class="sidebar-icon" />
-                            <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0;">Time Off</h5>
-                        </div>
-                        <div id="time-off" class="content-section" style="display: none">
-                            <p>Add a PTO policy for your organization, simply ask for days off, control missed workdays, manage balances and teams attendance hassle-free</p>
-                            <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right" style="color: #48BAFD;"></i></a>
+                        <div class="list-group-item list-group-item-action" data-section="time-off">
+                            <div class="d-flex align-items-center">
+                                <img src="https://tmetric.com/media/cajpa4uy/icon-time-off-blue.svg" alt="Time Off Icon"
+                                    class="sidebar-icon" />
+                                <h5 style="font-weight: bolder; text-align: center; margin-bottom: 0; margin-left: -15px;">Time Off</h5>
+                            </div>
+                            <div id="time-off" class="content-section" style="display: none">
+                                <p>Add a PTO policy for your organization, simply ask for days off, control missed
+                                    workdays, manage balances and teams attendance hassle-free</p>
+                                <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"
+                                        style="color: #48BAFD;"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    (function () {
-        function showContent(sectionId) {
-            var contentSections = document.querySelectorAll('.content-section');
-            contentSections.forEach(function (section) {
-                section.style.display = 'none';
-            });
-
-            var listItems = document.querySelectorAll('.list-group-item');
-            listItems.forEach(function (item) {
-                item.classList.remove('active', 'expanded');
-            });
-
-            var targetContent = document.getElementById(sectionId);
-            targetContent.style.display = 'block';
-
-            var targetImage = document.getElementById(sectionId + '-img');
-            if (targetImage) {
-                var images = document.querySelectorAll('.col-md-8 img');
-                images.forEach(function (img) {
-                    img.style.display = 'none';
+    <script>
+        (function () {
+            function showContent(sectionId) {
+                var contentSections = document.querySelectorAll('.content-section');
+                contentSections.forEach(function (section) {
+                    section.style.display = 'none';
                 });
-                targetImage.style.display = 'block';
+
+                var listItems = document.querySelectorAll('.list-group-item');
+                listItems.forEach(function (item) {
+                    item.classList.remove('active', 'expanded');
+                });
+
+                var targetContent = document.getElementById(sectionId);
+                targetContent.style.display = 'block';
+
+                var targetImage = document.getElementById(sectionId + '-img');
+                if (targetImage) {
+                    var images = document.querySelectorAll('.col-md-8 img');
+                    images.forEach(function (img) {
+                        img.style.display = 'none';
+                    });
+                    targetImage.style.display = 'block';
+                }
+
+                var listItem = document.querySelector('[data-section="' + sectionId + '"]');
+                listItem.classList.add('active', 'expanded');
             }
 
-            var listItem = document.querySelector('[data-section="' + sectionId + '"]');
-            listItem.classList.add('active', 'expanded');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var listItems = document.querySelectorAll('.list-group-item');
-            listItems.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    var sectionId = item.getAttribute('data-section');
-                    showContent(sectionId);
+            document.addEventListener('DOMContentLoaded', function () {
+                var listItems = document.querySelectorAll('.list-group-item');
+                listItems.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        var sectionId = item.getAttribute('data-section');
+                        showContent(sectionId);
+                    });
                 });
-            });
 
-            showContent('time-tracking');
-        });
-    })();
-</script>
+                showContent('time-tracking');
+            });
+        })();
+    </script>
 
 
     <!-- Surya code part-2  -->
-    
+
     <section id="effective " style="background-color: #f8f9fa ;">
         <div class="container overflow-hidden">
-          <div class="row justify-content-center mb-5">
-            <div class="col-lg-5 px-5   d-flex flex-column" data-aos="fade-up"
-            data-aos-duration="3000">
-              <h1
-                class="fw-bolder mt-5 mb-4 text-start"
-                style="color: hsl(210, 11%, 18%)"
-              >
-                Take effective control of working time
-              </h1>
-              <ul>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> timekeeping</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">sites and apps monitoring</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> activity tracking</a></li>
-                <li><a href="#" class=" fs-5 fw-medium"> screenshots capturing</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">task management</a></li>
-                <li><a href="#" class=" fs-5 fw-medium">50+ integrations</a></li>
-                <li><a href="#" class=" fs-5 fw-medium">work schedule</a></li>
-                
-              </ul>
-             <div class="row">
-              <div class="col-auto ">
-                <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free Trial</button>
-              </div>
-             </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-5 px-5   d-flex flex-column" data-aos="fade-up" data-aos-duration="3000">
+                    <h1 class="fw-bolder mt-5 mb-4 text-start" style="color: hsl(210, 11%, 18%)">
+                        Take effective control of working time
+                    </h1>
+                    <ul>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> timekeeping</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">sites and apps
+                                monitoring</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> activity tracking</a>
+                        </li>
+                        <li><a href="#" class=" fs-5 fw-medium"> screenshots capturing</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">task management</a></li>
+                        <li><a href="#" class=" fs-5 fw-medium">50+ integrations</a></li>
+                        <li><a href="#" class=" fs-5 fw-medium">work schedule</a></li>
+
+                    </ul>
+                    <div class="row">
+                        <div class="col-auto ">
+                            <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free
+                                Trial</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 time mt-5" data-aos="fade-left" data-aos-duration="3000">
+                    <img class="img-fluid" src="./assets/img-activity-cases.svg" alt="">
+                </div>
             </div>
-            <div class="col-7 time mt-5" data-aos="fade-left"
-            data-aos-duration="3000">
-              <img class="img-fluid" src="https://tmetric.com/media/kssowlxe/img-activity-cases.svg" alt="">
-            </div>
-          </div>
         </div>
-      </section>
-      <section id="profit" class="mt-5">
+    </section>
+    <section id="profit" class="mt-5">
         <div class="container-xxl justify-content-between">
-          <div class="row  mb-5">
-           
-            <div class="time col-7   " data-aos="fade-left"
-            data-aos-duration="3000" >
-              <img width="90%" height="90%" class="img-fluid"  src="/Timely-facebook-futurists-089/bootstrap/assets/Screenshot 2024-06-14 102908.png" alt="">
+            <div class="row  mb-5">
+
+                <div class="time col-7   " data-aos="fade-left" data-aos-duration="3000">
+                    <img width="90%" height="90%" class="img-fluid"
+                        src="./assets/img-report-cases-svg.svg" alt="">
+                </div>
+                <div class="col-lg-5 px-5 d-flex flex-column" data-aos="fade-right" data-aos-duration="3000">
+                    <h1 class="fw-bolder mt-5 mb-4 text-start" style="color: hsl(210, 11%, 18%)">
+                        Achieve high profitability by using time tracker
+                    </h1>
+                    <ul>
+
+
+
+
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> project management</a>
+                        </li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">project budgeting</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> billing and invoicing</a>
+                        </li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> accurate payroll</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">
+                                detailed reports</a></li>
+
+
+                    </ul>
+                    <div class="row">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free
+                                Trial</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-5 px-5 d-flex flex-column" data-aos="fade-right"
-            data-aos-duration="3000">
-              <h1
-                class="fw-bolder mt-5 mb-4 text-start"
-                style="color: hsl(210, 11%, 18%)"
-              >
-              Achieve high profitability by using time tracker
-              </h1>
-              <ul >
-               
-
-
-
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">  project management</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">project budgeting</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> billing and invoicing</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> accurate payroll</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">
-                  detailed reports</a></li>
-               
-                
-              </ul>
-             <div class="row">
-              <div class="col-auto">
-                <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free Trial</button>
-              </div>
-             </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <section id="improve " style="background-color: #f8f9fa ; ">
+    </section>
+    <section id="improve " style="background-color: #f8f9fa ; ">
         <div class="container overflow-hidden">
-          <div class="row justify-content-between mb-5 mt-5" data-aos="fade-up"
-          data-aos-duration="3000">
-            <div class="col-lg-5 px-5 d-flex flex-column mt-5" >
-              <h1
-                class="fw-bolder mt-5 mb-4 text-start mt-5"
-                style="color: hsl(210, 11%, 18%)"
-              >
-              Improve attendance with time off tracking software
-              </h1>
-              <ul>
-               
+            <div class="row justify-content-between mb-5 mt-5" data-aos="fade-up" data-aos-duration="3000">
+                <div class="col-lg-5 px-5 d-flex flex-column mt-5">
+                    <h1 class="fw-bolder mt-5 mb-4 text-start mt-5" style="color: hsl(210, 11%, 18%)">
+                        Improve attendance with time off tracking software
+                    </h1>
+                    <ul>
 
 
 
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">  flexible time off policy</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">time off requests management</a></li>
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> time off calendar</a></li>
-                
-                <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">pto calculations</a></li>
-                
-              </ul>
-             <div class="row">
-              <div class="col-auto">
-                <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free Trial</button>
-              </div>
-             </div>
+
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> flexible time off
+                                policy</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">time off requests
+                                management</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium"> time off calendar</a>
+                        </li>
+
+                        <li><a href="#" class="link-dark text-decoration-none fs-5 fw-medium">pto calculations</a></li>
+
+                    </ul>
+                    <div class="row">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary px-4 py-2 fw-medium mb-5">Start Free
+                                Trial</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 mt-5 time">
+                    <img width="100%" class="img-fluid"
+                        src="./assets/time-off-calendar-case.svg" alt="">
+                </div>
             </div>
-            <div class="col-7 mt-5 time">
-              <img width="100%" class="img-fluid" src="https://tmetric.com/media/mlzbtxv5/time-off-calendar-case.svg" alt="">
-            </div>
-          </div>
         </div>
-      </section>
-      <section id="integate" data-aos="fade-up"
-      data-aos-duration="3000">
+    </section>
+    <section id="integate" data-aos="fade-up" data-aos-duration="3000">
         <div class="container justify-content-center">
             <div class="row justify-content-center">
                 <div class="  text-center  d-flex flex-column justify-content-center ">
-                    <h1 class="fw-bolder text-center  mt-5 mb-4"  style="color: hsl(210, 11%, 18%)" >Integrate time tracker tool with 50+ <br> popular services</h1>
-                    <span class="fw-medium fs-5 ">Timely integrates with dozens of services, which lets you measure progress and activity in any tool you use.</span> <br>
-                    
+                    <h1 class="fw-bolder text-center  mt-5 mb-4" style="color: hsl(210, 11%, 18%)">Integrate time
+                        tracker tool with 50+ <br> popular services</h1>
+                    <span class="fw-medium fs-5 ">Timely integrates with dozens of services, which lets you measure
+                        progress and activity in any tool you use.</span> <br>
+
                 </div>
-    
+
             </div>
             <div class="d-flex justify-content-center align-items-center gap-5 mb-5">
-                <div >
+                <div>
                     <button type="button" class=" btn btn-primary px-4 py-2 fw-medium ">Start Free Trial</button>
                 </div>
-                <div  style="color: #2865ce">
-                    <h5  class="f" style="cursor: pointer" id="read">
-                      <a href="#" class="link-dark text-decoration-none fs-6">Explore All Integrations </a>  <i class="fa-solid fa-arrow-right"></i>
+                <div style="color: #2865ce">
+                    <h5 class="f" style="cursor: pointer" id="read">
+                        <a href="#" class="link-dark text-decoration-none fs-6">Explore All Integrations </a> <i
+                            class="fa-solid fa-arrow-right"></i>
                     </h5>
-    
-                  </div>
-                  
+
+                </div>
+
             </div>
-            
-      </div>
-    </section>
-    <section class="integrations-info" data-aos="fade-up"
-    data-aos-duration="3000">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 justify-content-center">
-            <ul class="gap-5 gap-md-5 gap-lg-3 list list-unstyled" id="logo">
-              <li class="col-6 col-md-3 col-lg-2 ">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/dkgp52u1/logo-google-workspace.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/fnbggshs/logo-integration-msoffice.svg" alt="MS Office" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/xw4hqraq/logo-google-keep.svg" alt="Google Keep" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img  class="img-fluid" src="https://tmetric.com/media/smflyk5w/logo-integration-github.svg" alt="GitHub" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/kbrcntmi/logo-integration-excel.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/4aeci1fh/logo-integration-asana.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/caxbzjss/logo-integration-jira.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                <a href="#">
-                    <img class="img-fluid" src="https://tmetric.com/media/aebf4s5m/gitlab-logo-2023.svg" alt="Google Workspace" />
-                </a>
-            </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/zbyntttc/logo-google-docs.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/0bzmfrlf/logo-integration-trello.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/sdaj41fi/logo-integration-redmine.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                  <a href="#">
-                      <img class="img-fluid" src="https://tmetric.com/media/1xedbfav/logo-integration-zendesk.svg" alt="Google Workspace" />
-                  </a>
-              </li>
-              <li class="col-6 col-md-3 col-lg-2">
-                <a href="#">
-                    <img class="img-fluid" src="https://tmetric.com/media/n3dmgi1p/logo-integration-wrike.svg" alt="Google Workspace" />
-                </a>
-            </li>
-          </ul>
-          </div>
+
         </div>
-          
-      </div>
+    </section>
+    <section class="integrations-info" data-aos="fade-up" data-aos-duration="3000">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 justify-content-center">
+                    <ul class="gap-5 gap-md-5 gap-lg-3 list list-unstyled" id="logo">
+                        <li class="col-6 col-md-3 col-lg-2 ">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/dkgp52u1/logo-google-workspace.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/fnbggshs/logo-integration-msoffice.svg"
+                                    alt="MS Office" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid" src="https://tmetric.com/media/xw4hqraq/logo-google-keep.svg"
+                                    alt="Google Keep" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/smflyk5w/logo-integration-github.svg" alt="GitHub" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/kbrcntmi/logo-integration-excel.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/4aeci1fh/logo-integration-asana.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/caxbzjss/logo-integration-jira.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid" src="https://tmetric.com/media/aebf4s5m/gitlab-logo-2023.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid" src="https://tmetric.com/media/zbyntttc/logo-google-docs.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/0bzmfrlf/logo-integration-trello.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/sdaj41fi/logo-integration-redmine.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/1xedbfav/logo-integration-zendesk.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                        <li class="col-6 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img class="img-fluid"
+                                    src="https://tmetric.com/media/n3dmgi1p/logo-integration-wrike.svg"
+                                    alt="Google Workspace" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </section>
     <hr>
-    
-    <section id="track time" >
-    <div class="container ">
-      <div class="row justify-content-center ">
-        <div class="col-12 mt-5 ">
-          <h3 class=" fs-1 fw-bold mb-4 mt-5 text-center" style="color: hsl(210, 11%, 18%)">
-            Why track time with Timely
-          </h3>
-        </div>
-      </div>
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-7 col-12">
-          <p class="fs-5 fw-medium">
-            Timely helps us to track and manage our work time on different 
-           
-            projects. It has provided us with a comprehensive overview of how
-            our 
-            time is allocated across various tasks. Its reporting features
-            have been  particularly helpful in providing us with valuable
-            insights into our work  patterns, which has resulted in increased
-            efficiency and productivity. 
-          </p>
-          <div class="row">
-            <div class="col-4 ">
-              <hr />
+
+    <section id="track time">
+        <div class="container ">
+            <div class="row justify-content-center ">
+                <div class="col-12 mt-5 ">
+                    <h3 class=" fs-1 fw-bold mb-4 mt-5 text-center" style="color: hsl(210, 11%, 18%)">
+                        Why track time with Timely
+                    </h3>
+                </div>
             </div>
-          </div>
-          <div class="row justify-content-between">
-            <div class="col-6 ">
-              <h5 class="fw-semibold fs-6" style="color: #212d39">
-                Linda Förster, project manager at Medudy
-              </h5>
-            </div>
-            <div class="col-3 " style="color: #2865ce">
-              <h5   style="cursor: pointer" id="read">
-                <a href="#" class="link-dark text-decoration-none fs-6"    >Read Full Story </a>  <i class="fa-solid fa-arrow-right"></i>
-              </h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col- col-sm-3" style="color: #ffac05">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-2" id="profile">
-          <img class="img-fluid"
-            style="
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 col-12">
+                    <p class="fs-5 fw-medium">
+                        Timely helps us to track and manage our work time on different
+
+                        projects. It has provided us with a comprehensive overview of how
+                        our
+                        time is allocated across various tasks. Its reporting features
+                        have been particularly helpful in providing us with valuable
+                        insights into our work patterns, which has resulted in increased
+                        efficiency and productivity.
+                    </p>
+                    <div class="row">
+                        <div class="col-4 ">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-6 ">
+                            <h5 class="fw-semibold fs-6" style="color: #212d39">
+                                Linda Förster, project manager at Medudy
+                            </h5>
+                        </div>
+                        <div class="col-3 " style="color: #2865ce">
+                            <h5 style="cursor: pointer" id="read">
+                                <a href="#" class="link-dark text-decoration-none fs-6">Read Full Story </a> <i
+                                    class="fa-solid fa-arrow-right"></i>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col- col-sm-3" style="color: #ffac05">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" id="profile">
+                    <img class="img-fluid" style="
               box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
                 rgba(0, 0, 0, 0.22) 0px 15px 12px; 
-            "data-aos="fade-left"
-            data-aos-duration="3000"
-            src="https://tmetric.com/media/2nupm14g/software_developers_photo.jpg"
-            alt=""
-          />
+            " data-aos="fade-left" data-aos-duration="3000"
+                        src="https://tmetric.com/media/2nupm14g/software_developers_photo.jpg" alt="" />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <hr />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10   ">
+                    <ul class="d-flex flex-wrap justify-content-between list-unstyled  mb-5" id="dev">
+                        <li><a href="#" class="link-dark text-decoration-none fw-bolder border-top "
+                                style="color: #4082f3 !important; border-color: #4082f3 !important;padding-top: 18px;">Software
+                                developers</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top  "
+                                style="padding-top: 18px ;">Marketers</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder   border-top "
+                                style="padding-top: 18px">Designers</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top "
+                                style="padding-top: 18px">Contractors</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top "
+                                style="padding-top: 18px">Consultants</a></li>
+                        <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top "
+                                style="padding-top: 18px">Freelancers</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <hr />
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-10   ">
-          <ul class="d-flex flex-wrap justify-content-between list-unstyled  mb-5" id="dev">
-            <li><a href="#" class="link-dark text-decoration-none fw-bolder border-top " style="color: #4082f3 !important; border-color: #4082f3 !important;padding-top: 18px;" >Software developers</a></li>
-            <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top  " style="padding-top: 18px ;">Marketers</a></li>
-            <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder   border-top " style="padding-top: 18px">Designers</a></li>
-            <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top " style="padding-top: 18px">Contractors</a></li>
-            <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top " style="padding-top: 18px">Consultants</a></li>
-            <li><a href="#" class="link-dark text-decoration-none text-secondary fw-bolder  border-top " style="padding-top: 18px">Freelancers</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
+
     </section>
     <section id="reviews" class="mt-5" style="background-color: #fff2cc ;">
-    <div class="container justify-content-center overflow-hidden" >
-      <div class="row justify-content-center">
-    
-        <div class="col-8 justify-content-center" >
-          <h1 class="mt-5 fw-bolder text-center"data-aos="fade-up"
-          data-aos-duration="1000" >Read Hundreds of Reviews
-          </h1><br>
-          <h1 class="text-center" data-aos="flip-right" style="color: #ffac05"> <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star "></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i></h1>
-            <h1 class="mt-5 fw-bolder text-center">4.5 Customer Rating
-            </h1>
-            <h1 class="mt-5 fw-bolder text-center mb-5" data-aos="flip-right" style="color: #4082f3;">242 Reviews
-            </h1>
-    
+        <div class="container justify-content-center overflow-hidden">
+            <div class="row justify-content-center">
+
+                <div class="col-8 justify-content-center">
+                    <h1 class="mt-5 fw-bolder text-center" data-aos="fade-up" data-aos-duration="1000">Read Hundreds of
+                        Reviews
+                    </h1><br>
+                    <h1 class="text-center" data-aos="flip-right" style="color: #ffac05"> <i
+                            class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star "></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </h1>
+                    <h1 class="mt-5 fw-bolder text-center">4.5 Customer Rating
+                    </h1>
+                    <h1 class="mt-5 fw-bolder text-center mb-5" data-aos="flip-right" style="color: #4082f3;">242
+                        Reviews
+                    </h1>
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     </section>
-    <section id="trusted" style="background-color: #f8f9fa ; " >
-    <div class="container overflow-hidden">
-      <div class="row "data-aos="fade-up"
-      data-aos-duration="3000">
-        <div class="col-md-12">
-          <div> <h3 class="text-center fw-bold mt-5 mb-5">Used and trusted by 3000+ businesses in the world</h3></div>
-          <div class="container-row justify-content-center d-flex flex-wrap gap-2   mb-5">
-            <img class="img-fluid" src="https://tmetric.com/media/wlmpffzm/logo_business_endygo.png" alt=""><img class="img-fluid" src="https://tmetric.com/media/0ddgehbk/logo_business_itsyndicate.png" alt=""><img class="img-fluid" src="https://tmetric.com/media/eozchehq/logo_business_pulso.png" alt=""><img class="img-fluid" src="https://tmetric.com/media/rmvok0xh/logo_business_050media.png" alt=""><img class="img-fluid" src="https://tmetric.com/media/ccpn231z/logo-business-jot-digi-tal.svg" alt=""><img class="img-fluid" src="https://tmetric.com/media/z0fhmi1j/logo-business-freshlab.svg" alt=""><img class="img-fluid" src="https://tmetric.com/media/xjogm2h2/logo-business-mvad.svg" alt="">  <img class="img-fluid" src="https://tmetric.com/media/nvalaok1/logo_business_swaven.png" alt="">
-          </div>
+    <section id="trusted" style="background-color: #f8f9fa ; ">
+        <div class="container overflow-hidden">
+            <div class="row " data-aos="fade-up" data-aos-duration="3000">
+                <div class="col-md-12">
+                    <div>
+                        <h3 class="text-center fw-bold mt-5 mb-5">Used and trusted by 3000+ businesses in the world</h3>
+                    </div>
+                    <div class="container-row justify-content-center d-flex flex-wrap gap-2   mb-5">
+                        <img class="img-fluid" src="https://tmetric.com/media/wlmpffzm/logo_business_endygo.png"
+                            alt=""><img class="img-fluid"
+                            src="https://tmetric.com/media/0ddgehbk/logo_business_itsyndicate.png" alt=""><img
+                            class="img-fluid" src="https://tmetric.com/media/eozchehq/logo_business_pulso.png"
+                            alt=""><img class="img-fluid"
+                            src="https://tmetric.com/media/rmvok0xh/logo_business_050media.png" alt=""><img
+                            class="img-fluid" src="https://tmetric.com/media/ccpn231z/logo-business-jot-digi-tal.svg"
+                            alt=""><img class="img-fluid"
+                            src="https://tmetric.com/media/z0fhmi1j/logo-business-freshlab.svg" alt=""><img
+                            class="img-fluid" src="https://tmetric.com/media/xjogm2h2/logo-business-mvad.svg" alt="">
+                        <img class="img-fluid" src="https://tmetric.com/media/nvalaok1/logo_business_swaven.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
-    
-      </div>
-      
-     
-     
-    </div>
     </section>
-<!-- Parveen's ends Code -------------------------------------- -->
-<!-- Dhananjay's Code ---------------------------------------------------------------- -->
-<div class="container ">
-    <div class=" text-center">
-        <div class="  pad px-0 pt-5 mt-5 overflow-hidden ">
-            <h2 class=" fs-1  text-black margin mb-1 font " data-aos="fade-up">Why choose Timely?</h2>
-        </div>
-    </div>
-</div>
-<div class="d-flex  flex-wrap justify-content-center pad px-0 pb-5 mb-5">
-    <div class=" d-flex  ">
-        <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
-            <div class="mb-4 h-4 mx-3">
-                <img src="https://tmetric.com/media/zrvmvbl3/icon-straightforward.svg" width="60px" height="60"
-                    alt="logo">
+    <!-- Parveen's ends Code -------------------------------------- -->
+    <!-- Dhananjay's Code ---------------------------------------------------------------- -->
+    <div class="container ">
+        <div class=" text-center">
+            <div class="  pad px-0 pt-5 mt-5 overflow-hidden ">
+                <h2 class=" fs-1  text-black margin mb-1 font " data-aos="fade-up">Why choose Timely?</h2>
             </div>
-            <p class="card-text m-3 me-5 text-start">The most <br> straight forward time <br> tracking app</p>
         </div>
     </div>
-    <div class="d-flex    ">
-        <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
-            <div class="mb-4 h-4 mx-3">
-                <img src="https://tmetric.com/media/opdfdo3l/icon-platforms.svg" width="60px" alt="logo">
-            </div>
-            <p class="card-text m-3 me-5 text-start">Available on all <br> platforms: macOS, <br> Windows, Linux,
-                iOS,<br> and Android</p>
-        </div>
-    </div>
-    <div class="d-flex    ">
-        <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
-            <div class="mb-4 h-4 mx-3 ms">
-                <img src="https://tmetric.com/media/igkmpmix/icon-freetrial.svg" width="60px" alt="logo">
-            </div>
-            <p class="card-text m-3 me-5  text-start">Free plan with basic <br>time tracking for a <br>team up to 5
-            </p>
-        </div>
-    </div>
-    <div class="d-flex   ">
-        <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
-            <div class="mb-4 h-4 mx-3">
-                <img src="https://tmetric.com/media/htxfmpoe/icon-reasonableprice.svg" width="60px" alt="logo">
-            </div>
-            <p class="card-text m-3 me-5 text-start">Reasonable price <br> makes it affordable <br> for anyone</p>
-        </div>
-    </div>
-    <div class="d-flex   ">
-        <div class="m-4 px-5 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
-            <div class="mb-4 h-4 mx-3">
-                <img src="https://tmetric.com/media/0uyowzzu/icon-multilang.svg" width="60px" alt="logo">
-            </div>
-            <p class="card-tex m-3 me-5 text-start">Multilanguage <br> solution</p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<div class="card text-center" data-aos="flip-down">
-    <div class=" bg-violet pad px-0 py-5   " data-aos="fade-up">
-        <h2 class=" fs-1  text-white margin mb-4 font ">Make time work for you!</h2>
-        <a href="#" class="btn px-4 mb-4 bg-white text-black " data-aos="flip-right">Start Free Trial</a>
-        <p class=" text-white">Powered by <img src="https://tmetric.com/media/pvgfkry5/logo-devart-small-white.svg"
-                alt=""> A software vendor with 25 years of experience.</p>
-    </div>
-</div>
-<footer class="footer-light .bg-light mt-5">
-    <div class="footer-big">
-        <!-- start.container -->
-        <div class="container">
-            <div class="row overflow-hidden">
-                <div class="col-lg-3 " data-aos="fade-up" data-aos-duration="1000">
-                    <div class="footer-widget">
-                        <div class="widget-about">
-                            <img src="/Timely-facebook-futurists-089/bootstrap/assets/timely (2).png" width="150px" >
-                        </div>
-                    </div>
-                    <!-- Ends: footer-widget-->
+    <div class="d-flex  flex-wrap justify-content-center pad px-0 pb-5 mb-5">
+        <div class=" d-flex  ">
+            <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
+                <div class="mb-4 h-4 mx-3">
+                    <img src="https://tmetric.com/media/zrvmvbl3/icon-straightforward.svg" width="60px" height="60"
+                        alt="logo">
                 </div>
-                <!-- end /.col-lg-4 -->
-                <div class="col-lg-2 col-sm-6 .d-sm-flex d-none" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="footer-widget">
-                        <div class="footer-menu">
-                            <h5 class="footer-widget-title">Applications</h5>
-                            <ul class="list-unstyled ">
-                                <li class="py-1">
-                                    <i class="fa-solid fa-tv " style="color: #878787;"></i>
-                                    <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Desktop
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-apple fa-xl " style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        iOS
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-android" style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Android
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--end /.footer-menu-->
-                    </div>
-                    <!-- Ends: footer-widget-->
+                <p class="card-text m-3 me-5 text-start">The most <br> straight forward time <br> tracking app</p>
+            </div>
+        </div>
+        <div class="d-flex    ">
+            <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
+                <div class="mb-4 h-4 mx-3">
+                    <img src="https://tmetric.com/media/opdfdo3l/icon-platforms.svg" width="60px" alt="logo">
                 </div>
-                <!-- end /.col-lg-3 -->
-                <div class="col-lg-2 col-sm-6 .d-sm-flex d-none " data-aos="fade-up" data-aos-duration="1000">
-                    <div class="footer-widget">
-                        <div class="footer-menu">
-                            <h5 class="footer-widget-title ">Browser Extensions</h5>
-                            <ul class="list-unstyled ">
-                                <li class="py-1">
-                                    <i class="fa-brands fa-chrome fa-xl" style="color: #878787;"></i>
-                                    <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Chrome
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-firefox fa-xl" style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Firefox
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-opera fa-xl" style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Opera
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-edge fa-xl" style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Edge
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <i class="fa-brands fa-safari fa-xl" style="color: #878787;"></i>
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                        href="#">
-                                        Safari
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- end /.footer-menu-->
-                    </div>
-                    <!-- Ends: .footer-widget-->
+                <p class="card-text m-3 me-5 text-start">Available on all <br> platforms: macOS, <br> Windows, Linux,
+                    iOS,<br> and Android</p>
+            </div>
+        </div>
+        <div class="d-flex    ">
+            <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
+                <div class="mb-4 h-4 mx-3 ms">
+                    <img src="https://tmetric.com/media/igkmpmix/icon-freetrial.svg" width="60px" alt="logo">
                 </div>
-                <!-- end /.col-lg-3 -->
-                <div class="col-lg-2 col-sm-6 .d-sm-flex d-none" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="footer-widget">
-                        <div class="footer-menu p-0">
-                            <h5 class="footer-widget-title">Resources</h5>
-                            <ul class="list-unstyled ">
-                                <li class="py-1">
-                                    <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Solutions
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Integrations
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Help
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Time Trackers Comparison
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        White Papers
-                                    </a>
-                                </li>
-                                <li class="py-1">
+                <p class="card-text m-3 me-5  text-start">Free plan with basic <br>time tracking for a <br>team up to 5
+                </p>
+            </div>
+        </div>
+        <div class="d-flex   ">
+            <div class="m-4 px-4 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
+                <div class="mb-4 h-4 mx-3">
+                    <img src="https://tmetric.com/media/htxfmpoe/icon-reasonableprice.svg" width="60px" alt="logo">
+                </div>
+                <p class="card-text m-3 me-5 text-start">Reasonable price <br> makes it affordable <br> for anyone</p>
+            </div>
+        </div>
+        <div class="d-flex   ">
+            <div class="m-4 px-5 py-4 border rounded" data-aos="fade-up" data-aos-duration="3000">
+                <div class="mb-4 h-4 mx-3">
+                    <img src="https://tmetric.com/media/0uyowzzu/icon-multilang.svg" width="60px" alt="logo">
+                </div>
+                <p class="card-tex m-3 me-5 text-start">Multilanguage <br> solution</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="card text-center" data-aos="flip-down">
+        <div class=" bg-violet pad px-0 py-5   " data-aos="fade-up">
+            <h2 class=" fs-1  text-white margin mb-4 font ">Make time work for you!</h2>
+            <a href="#" class="btn px-4 mb-4 bg-white text-black " data-aos="flip-right">Start Free Trial</a>
+            <p class=" text-white">Powered by <img src="https://tmetric.com/media/pvgfkry5/logo-devart-small-white.svg"
+                    alt=""> A software vendor with 25 years of experience.</p>
+        </div>
+    </div>
+    <footer class="footer-light .bg-light mt-5">
+        <div class="footer-big">
+            <!-- start.container -->
+            <div class="container">
+                <div class="row overflow-hidden">
+                    <div class="col-lg-3 " data-aos="fade-up" data-aos-duration="1000">
+                        <div class="footer-widget">
+                            <div class="widget-about">
+                                <img src="./assets/timely.svg" width="150px">
+                            </div>
+                        </div>
+                        <!-- Ends: footer-widget-->
+                    </div>
+                    <!-- end /.col-lg-4 -->
+                    <div class="col-lg-2 col-sm-6 .d-sm-flex d-none" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h5 class="footer-widget-title">Applications</h5>
+                                <ul class="list-unstyled ">
+                                    <li class="py-1">
+                                        <i class="fa-solid fa-tv " style="color: #878787;"></i>
+                                        <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Desktop
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-apple fa-xl " style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            iOS
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-android" style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Android
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--end /.footer-menu-->
+                        </div>
+                        <!-- Ends: footer-widget-->
+                    </div>
+                    <!-- end /.col-lg-3 -->
+                    <div class="col-lg-2 col-sm-6 .d-sm-flex d-none " data-aos="fade-up" data-aos-duration="1000">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h5 class="footer-widget-title ">Browser Extensions</h5>
+                                <ul class="list-unstyled ">
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-chrome fa-xl" style="color: #878787;"></i>
+                                        <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Chrome
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-firefox fa-xl" style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Firefox
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-opera fa-xl" style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Opera
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-edge fa-xl" style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Edge
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <i class="fa-brands fa-safari fa-xl" style="color: #878787;"></i>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                            href="#">
+                                            Safari
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu-->
+                        </div>
+                        <!-- Ends: .footer-widget-->
+                    </div>
+                    <!-- end /.col-lg-3 -->
+                    <div class="col-lg-2 col-sm-6 .d-sm-flex d-none" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="footer-widget">
+                            <div class="footer-menu p-0">
+                                <h5 class="footer-widget-title">Resources</h5>
+                                <ul class="list-unstyled ">
+                                    <li class="py-1">
+                                        <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Solutions
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Integrations
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Help
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Time Trackers Comparison
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            White Papers
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
 
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Blog
-                                    </a>
-                                </li>
-                            </ul>
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Blog
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu-->
                         </div>
-                        <!-- end /.footer-menu-->
+                        <!-- Ends: .footer-widget -->
                     </div>
-                    <!-- Ends: .footer-widget -->
-                </div>
-                <!-- Ends: .col-lg-3 -->
-                <div class="col-lg-2 col-sm-6 .d-sm-flex d-none " data-aos="fade-up" data-aos-duration="1000">
-                    <div class="footer-widget">
-                        <div class="footer-menu">
-                            <h5 class="footer-widget-title">About</h5>
-                            <ul class="list-unstyled ">
-                                <li class="py-1">
-                                    <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        About Timely
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Terms of Service
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Cookies Policy
-                                    </a>
-                                </li>
-                                <li class="py-1">
-                                    <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                        href="#">
-                                        Partnership
-                                    </a>
-                                </li>
-                            </ul>
+                    <!-- Ends: .col-lg-3 -->
+                    <div class="col-lg-2 col-sm-6 .d-sm-flex d-none " data-aos="fade-up" data-aos-duration="1000">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h5 class="footer-widget-title">About</h5>
+                                <ul class="list-unstyled ">
+                                    <li class="py-1">
+                                        <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            About Timely
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Cookies Policy
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                            href="#">
+                                            Partnership
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu-->
                         </div>
-                        <!-- end /.footer-menu-->
+                        <!-- Ends: .footer-widget-->
                     </div>
-                    <!-- Ends: .footer-widget-->
-                </div>
-                <div class="col-12 d-block d-sm-none accordion-container">
+                    <div class="col-12 d-block d-sm-none accordion-container">
 
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Applications
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="list-unstyled ">
-                                        <li class="py-1">
-                                            <i class="fa-solid fa-tv " style="color: #878787;"></i>
-                                            <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Desktop
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-apple fa-xl " style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                iOS
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-android" style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Android
-                                            </a>
-                                        </li>
-                                    </ul>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Applications
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled ">
+                                            <li class="py-1">
+                                                <i class="fa-solid fa-tv " style="color: #878787;"></i>
+                                                <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Desktop
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-apple fa-xl " style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    iOS
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-android" style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Android
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Browser Extensions
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled ">
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-chrome fa-xl" style="color: #878787;"></i>
+                                                <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Chrome
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-firefox fa-xl" style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Firefox
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-opera fa-xl" style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Opera
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-edge fa-xl" style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Edge
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <i class="fa-brands fa-safari fa-xl" style="color: #878787;"></i>
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
+                                                    href="#">
+                                                    Safari
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Resources
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled ">
+                                            <li class="py-1">
+                                                <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Solutions
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Integrations
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Help
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Time Trackers Comparison
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    White Papers
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Blog
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        About
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled ">
+                                            <li class="py-1">
+                                                <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    About Timely
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Terms of Service
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Privacy Policy
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Cookies Policy
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
+                                                    href="#">
+                                                    Partnership
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Browser Extensions
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="list-unstyled ">
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-chrome fa-xl" style="color: #878787;"></i>
-                                            <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Chrome
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-firefox fa-xl" style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Firefox
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-opera fa-xl" style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Opera
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-edge fa-xl" style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Edge
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <i class="fa-brands fa-safari fa-xl" style="color: #878787;"></i>
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black ms-2"
-                                                href="#">
-                                                Safari
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Resources
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="list-unstyled ">
-                                        <li class="py-1">
-                                            <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Solutions
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Integrations
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Help
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Time Trackers Comparison
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                White Papers
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Blog
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                    aria-controls="flush-collapseFour">
-                                    About
-                                </button>
-                            </h2>
-                            <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul class="list-unstyled ">
-                                        <li class="py-1">
-                                            <a class=" link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                About Timely
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Terms of Service
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Privacy Policy
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Cookies Policy
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-black "
-                                                href="#">
-                                                Partnership
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <!-- end /.row -->
                 </div>
-                <!-- end /.row -->
+                <!-- end /.container-->
             </div>
-            <!-- end /.container-->
-        </div>
         </div>
         <!-- end /.footer-big -->
-</footer>
-<hr>
-<div class="container-row">
-    <div class="container overflow-hidden ">
-        <ul class=" d-flex justify-content-center p-0 m-0">
-            <li class="list-unstyled px-2"><i class="fa-brands fa-square-facebook fa-2xl"
-                    style="color: #878787;"></i></li>
-            <li class="list-unstyled px-2"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #878787;"></i>
-            </li>
-            <li class="list-unstyled px-2"><i class="fa-brands fa-linkedin fa-2xl" style="color: #878787;"></i></li>
-            <li class="list-unstyled px-2"><i class="fa-brands fa-youtube fa-2xl" style="color: #878787;"></i></li>
-            <li class="list-unstyled px-2"><i class="fa-brands fa-discord fa-2xl" style="color: #878787;"></i></li>
-        </ul>
-        <div class=" copyright  text-center fs-5">
-            <span>Copyright © Devart 2024</span>
+    </footer>
+    <hr>
+    <div class="container-row">
+        <div class="container overflow-hidden ">
+            <ul class=" d-flex justify-content-center p-0 m-0">
+                <li class="list-unstyled px-2"><i class="fa-brands fa-square-facebook fa-2xl"
+                        style="color: #878787;"></i></li>
+                <li class="list-unstyled px-2"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #878787;"></i>
+                </li>
+                <li class="list-unstyled px-2"><i class="fa-brands fa-linkedin fa-2xl" style="color: #878787;"></i></li>
+                <li class="list-unstyled px-2"><i class="fa-brands fa-youtube fa-2xl" style="color: #878787;"></i></li>
+                <li class="list-unstyled px-2"><i class="fa-brands fa-discord fa-2xl" style="color: #878787;"></i></li>
+            </ul>
+            <div class=" copyright  text-center fs-5">
+                <span>Copyright © Devart 2024</span>
+            </div>
         </div>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./index.js"></script>
 
-  </body>
+</body>
+
 </html>
-
-
