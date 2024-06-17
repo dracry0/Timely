@@ -13,7 +13,7 @@ FRONTEND ONLY
 <br>
 
 ## Deployed App
-1.[Timely](https://your-deployed-app-url.com)
+1.[Timely](https://timely-facebook-futurists-089.netlify.app/)
 
 2.[ViaTours](https://figma-facebook-futureists-089.netlify.app/)
 
