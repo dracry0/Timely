@@ -10,7 +10,7 @@ It offers features such as time tracking, project management, billing and invoic
 Frontend
 
 ## Deplolyed App
-Frontend: https://figma-facebook-futureists-089.netlify.app
+Frontend: https://timely-facebook-futurists-089.netlify.app
 
 <br>
 
@@ -25,7 +25,7 @@ figma/
 <br>
    
 ## Video Walkthrough of the project
-[Here's]()
+[Here's](https://youtu.be/srUKhz7zMPI)
  a Video Walkthrough of the ViaTours(figma) website
 
 <br>
@@ -46,7 +46,7 @@ npm install -g bootstrap@5.3.3
 ## Usage
 Enter the bootsrap directory and open Website with Live server OR
 <br>
-you can open the deployed link()
+you can open the deployed link(https://timely-facebook-futurists-089.netlify.app)
 
 <br>
 
