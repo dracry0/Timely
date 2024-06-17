@@ -28,8 +28,14 @@ figma/
    
 ## Video Walkthrough of the project
 Here's a Video Walkthrough of the ViaTours(figma) website
-[![ViaTours](![image](https://github.com/dracry0/Timely-facebook-futurists-089/assets/86601825/81bad191-c2a1-46b4-835e-818ecc3ddd08)
-)](https://youtu.be/dUF_yy1-fD4)
+<div align="center">
+  <a href="https://youtu.be/dUF_yy1-fD4">
+    <img src="![image](https://github.com/dracry0/Timely-facebook-futurists-089/assets/86601825/135565ba-2413-42cc-a221-57ccfd9089dc)
+" alt="Video Title" style="width:80%; max-width:600px;"/>
+  </a>
+  <p><a href="https://youtu.be/dUF_yy1-fD4">Watch the video on YouTube</a></p>
+</div>
+
 
 
 
