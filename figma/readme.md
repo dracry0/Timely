@@ -12,7 +12,7 @@ It features special discounts, trending destinations, and customer reviews, aimi
 Frontend
 
 ## Deplolyed App
-Frontend: https://figma-facebook-futureists-089.netlify.app
+Frontend: https://viatours-facebook-futurists-089-2reh.vercel.app/
 
 <br>
 
@@ -52,7 +52,7 @@ cd figma
 ## Usage
 Enter the figma directory and open Website with Live server OR
 <br>
-you can open the deployed link(https://figma-facebook-futureists-089.netlify.app/)
+you can open the deployed link(https://viatours-facebook-futurists-089-2reh.vercel.app/)
 
 <br>
 
