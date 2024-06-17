@@ -27,7 +27,7 @@ figma/
 <br>
    
 ## Video Walkthrough of the project
-[![Here's]](https://www.youtube.com/watch?v=VIDEO_ID)
+[Here's](https://www.youtube.com/watch?v=VIDEO_ID)
  a Video Walkthrough of the ViaTours(figma) website
 
 
