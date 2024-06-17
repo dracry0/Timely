@@ -3,7 +3,11 @@
 
 ## Introduction
 
-Empower your team with time tracking using Timely. Make use of time for collaboration, productivity, and efficiency with our frontend-only application.
+This Repository contains two project websites Namely;
+<br>
+1. Timely - A Dynamic Website made from Boostrap, HTML and CSS.
+<br>
+2. ViaTours - A Static Website made from Figma, Sass, HTML and CSS.
 <br>
 
 ## Project Type
@@ -11,6 +15,12 @@ FRONTEND ONLY
 <br>
 
 ## Deployed App
+<br>
+1.[Timely](https://your-deployed-app-url.com)
+
+<br>
+2.[ViaTours](https://figma-facebook-futureists-089.netlify.app/)
+
 <br>
 
 ## Directory Structure
@@ -23,7 +33,17 @@ Tmetric/
 <br>
 
 ## Installation & Getting started
+
+#### BOOTSTRAP 
+
 ```bash
-cd Tmetric
+cd bootstrap
 npm install -g bootstrap@5.3.3
+
+```
+
+#### VIATOURS
+```bash
+cd figma
+```
 
