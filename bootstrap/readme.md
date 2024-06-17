@@ -25,8 +25,8 @@ figma/
 <br>
    
 ## Video Walkthrough of the project
-[Here's]()
- a Video Walkthrough of the ViaTours(figma) website
+[Here's](https://youtu.be/L1XiUW-rR_E)
+ a Video Walkthrough of the Timely(Bootstrap) website
 
 <br>
 
@@ -46,7 +46,7 @@ npm install -g bootstrap@5.3.3
 ## Usage
 Enter the bootsrap directory and open Website with Live server OR
 <br>
-you can open the deployed link()
+you can open the deployed link(https://figma-facebook-futureists-089.netlify.app)
 
 <br>
 
