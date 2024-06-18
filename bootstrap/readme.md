@@ -15,7 +15,7 @@ Frontend: https://timely-facebook-futurists-089.vercel.app/
 <br>
 
 ## Directory Structure
-# Bootstrap Directory Structure
+
 
 # Bootstrap Directory Structure
 ```
