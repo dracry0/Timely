@@ -119,6 +119,8 @@
   height: 573px;
   margin-bottom: 182px;
   background-image: url("./Assets/Vector (1).png");
+  background-position: center;
+  background-size: cover;
 }
 
 .mid-1 {
@@ -472,6 +474,8 @@
   margin: auto;
   /* border:  1px solid brown; */
   background-image: url("./Assets/Vector (2).png");
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
@@ -713,6 +717,8 @@
   margin: auto;
   margin-top: 105px;
   background-image: url(./Assets/Section\ →\ image.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .container4 .content4 {
@@ -932,6 +938,8 @@ body > section:nth-of-type(3) .articles div div p:nth-of-type(2) {
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(1) div {
   background-image: url("./img/kafi.png");
+  background-position: center;
+  background-size: cover;
 }
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(1) p:nth-of-type(2) {
@@ -940,6 +948,8 @@ body > section:nth-of-type(3) .articles div div:nth-of-type(1) p:nth-of-type(2) 
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(2) div {
   background-image: url("./img/kafi2.png");
+  background-position: center;
+  background-size: cover;
 }
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(2) p:nth-of-type(2) {
@@ -948,6 +958,8 @@ body > section:nth-of-type(3) .articles div div:nth-of-type(2) p:nth-of-type(2) 
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(3) div {
   background-image: url("./img/kafi3.png");
+  background-position: center;
+  background-size: cover;
 }
 
 body > section:nth-of-type(3) .articles div div:nth-of-type(3) p:nth-of-type(2) {
