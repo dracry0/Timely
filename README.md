@@ -21,11 +21,11 @@ FRONTEND ONLY
 
 ## Directory Structure
 
-
+```
 Tmetric/
 ├─ Figma/
 ├─ Bootstrap/
-
+```
 <br>
 
 ## Installation & Getting started
